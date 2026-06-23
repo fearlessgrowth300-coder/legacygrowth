@@ -105,11 +105,11 @@ export function WhatIfSection() {
               <span className="sm:hidden">WhatsApp Harper</span>
             </Button>
             
-            <Button 
+            <Button
               size="lg"
-              variant="outline"
+              variant="hero"
               onClick={handleEmailClick}
-              className="border-white/30 text-white hover:bg-white/10 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-300"
+              className="px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold"
             >
               <Mail className="mr-2 sm:mr-3 h-4 w-4 sm:h-5 sm:w-5" />
               <span className="hidden sm:inline">Email Harper</span>
