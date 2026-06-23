@@ -12,6 +12,7 @@ const VIDEOS = [
   "/ugc/ugc-5.mp4",
   "/ugc/ugc-6.mp4",
   "/ugc/ugc-7.mp4",
+  "/ugc/ugc-8.mp4",
 ];
 
 const SERVICES = [
