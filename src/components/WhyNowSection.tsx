@@ -73,7 +73,7 @@ export function WhyNowSection() {
 
           {/* Call to Action */}
           <div className="text-center animate-fade-in">
-            <Card className="p-8 bg-gradient-primary text-white max-w-3xl mx-auto">
+            <Card className="p-8 bg-gradient-hero text-white border-0 max-w-3xl mx-auto">
               <h3 className="text-2xl font-bold mb-4">
                 Don't let tech fear or setup stress be the reason you stay stuck.
               </h3>
