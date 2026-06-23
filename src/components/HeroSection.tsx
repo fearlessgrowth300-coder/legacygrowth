@@ -62,13 +62,9 @@ export function HeroSection() {
               Turn Your Digital Product Into True Family Freedom. Live the Dream. We'll Handle the Sales.
             </h1>
             
-            <h2 className="mx-auto max-w-[21rem] text-base sm:max-w-xl sm:text-xl lg:mx-0 lg:text-2xl text-white/90 mb-4 font-medium font-serif">
+            <h2 className="mx-auto max-w-[21rem] text-base sm:max-w-xl sm:text-xl lg:mx-0 lg:text-2xl text-white/90 mb-8 font-medium font-serif">
               Ready to achieve the financial freedom you bought that digital product for? We partner with creators and entrepreneurs to market your products and maximize your revenue.
             </h2>
-            
-            <p className="text-sm sm:text-lg text-white/80 mb-8 max-w-[21rem] sm:max-w-xl mx-auto lg:mx-0 leading-relaxed">
-              If you have a digital product or course but are struggling to get consistent sales, you don't have to figure out marketing alone. We specialize in helping everyday entrepreneurs, busy moms, and creators turn their digital assets into steady revenue. No marketing experience required - we handle the strategy to help you unlock the ultimate freedom for your family.
-            </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
