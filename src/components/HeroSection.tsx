@@ -2,9 +2,8 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { TwoStepCTAModal } from "@/components/TwoStepCTAModal";
-import { CSSHeroBackground } from "@/components/ui/css-hero-background";
 import { MessageCircle, Mail, Star, TrendingUp, DollarSign } from "lucide-react";
-import { RevenueTrendChart } from "@/components/RevenueTrendChart";
+import heroFunnelDashboard from "@/assets/hero-funnel-dashboard.jpg";
 
 export function HeroSection() {
   const [showCTAModal, setShowCTAModal] = useState(false);
@@ -21,16 +20,14 @@ export function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-primary">
-      {/* Lightweight CSS-only animated background */}
-      <CSSHeroBackground />
-      {/* Dark overlay for text readability */}
-      <div className="absolute inset-0 bg-black/30 z-[1]" />
+    <section className="relative min-h-[calc(100svh-56px)] flex items-center justify-center overflow-hidden bg-gradient-hero">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,hsl(var(--accent)/0.18),transparent_32%),linear-gradient(135deg,hsl(var(--luxury-navy)),hsl(var(--primary)),hsl(var(--secondary)))]" />
+      <div className="absolute inset-0 bg-black/25 z-[1]" />
 
       <div className="container mx-auto px-4 pt-8 pb-16 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
+        <div className="grid lg:grid-cols-[1.02fr_0.98fr] gap-6 lg:gap-12 items-center">
           {/* Left Column - Content */}
-          <div className="text-center lg:text-left animate-fade-in">
+          <div className="order-2 text-center lg:order-1 lg:text-left animate-fade-in">
             {/* Success Indicators */}
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 sm:gap-4 mb-6">
               <Card className="p-2 sm:p-3 bg-white/10 border-white/20 backdrop-blur-sm">
@@ -47,15 +44,15 @@ export function HeroSection() {
               </Card>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-serif font-bold text-white mb-6 leading-tight">
+            <h1 className="mx-auto max-w-[20rem] text-[1.85rem] leading-[1.08] sm:max-w-2xl sm:text-4xl md:text-5xl lg:mx-0 lg:text-7xl font-serif font-bold text-white mb-5 lg:mb-6">
               Struggling to Get Sales? Here's How to Turn Your Digital Products Into Revenue
             </h1>
             
-            <h2 className="text-lg sm:text-xl lg:text-2xl text-white/90 mb-4 font-medium font-serif">
+            <h2 className="mx-auto max-w-[20rem] text-base sm:max-w-xl sm:text-xl lg:mx-0 lg:text-2xl text-white/90 mb-4 font-medium font-serif">
               Professional Sales Funnel Setup That Gets Results in 7-14 Days
             </h2>
             
-            <p className="text-base sm:text-lg text-white/80 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+            <p className="text-sm sm:text-lg text-white/80 mb-8 max-w-[20rem] sm:max-w-xl mx-auto lg:mx-0 leading-relaxed">
               If you have a digital product but struggle to get consistent sales, I can help. Expert funnel setup and optimization service that helped 100+ digital marketers generate their first $424+ in overnight sales. No tech skills required—I handle everything for you.
             </p>
 
@@ -74,6 +71,7 @@ export function HeroSection() {
               
               <Button
                 size="xl"
+                onClick={handleEmailClick}
                 className="group text-sm sm:text-base px-4 sm:px-6 py-3 sm:py-4 bg-accent text-accent-foreground hover:bg-accent/90 shadow-gold hover:shadow-glow"
               >
                 <Mail className="h-4 w-4 sm:h-5 sm:w-5 mr-2 group-hover:scale-110 transition-transform" />
@@ -95,10 +93,32 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Right Column - Interactive Chart */}
-          <div className="relative animate-scale-in flex items-center justify-center">
-            <div className="relative w-full max-w-lg mx-auto">
-              <RevenueTrendChart />
+          {/* Right Column - Hero Image */}
+          <div className="relative order-1 flex items-center justify-center lg:order-2">
+            <div className="relative w-full max-w-[20rem] sm:max-w-xl mx-auto">
+              <div className="relative overflow-hidden rounded-2xl border border-white/15 bg-white/10 shadow-luxury">
+                <img
+                  src={heroFunnelDashboard}
+                  alt="Digital product sales funnel dashboard with phone storefront and revenue growth visuals"
+                  width={1717}
+                  height={916}
+                  loading="eager"
+                  decoding="async"
+                  fetchPriority="high"
+                  className="aspect-[1717/916] w-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-luxury-black/45 via-transparent to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4 grid grid-cols-3 gap-2">
+                  {["Funnel Ready", "Store Live", "Payments Set"].map((label) => (
+                    <div
+                      key={label}
+                      className="rounded-lg border border-white/15 bg-black/35 px-3 py-2 text-center text-[11px] font-semibold text-white backdrop-blur-sm sm:text-xs"
+                    >
+                      {label}
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>

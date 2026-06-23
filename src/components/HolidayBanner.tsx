@@ -28,10 +28,12 @@ export const HolidayBanner = () => {
         )}
       </div>
 
-      <div className="relative z-10 flex items-center justify-center gap-2">
-        <span className="text-xl animate-bounce">{currentHoliday.decorations.icon}</span>
-        <span className="text-sm md:text-base">{currentHoliday.bannerMessage}</span>
-        <span className="text-xl animate-bounce">{currentHoliday.decorations.icon}</span>
+      <div className="relative z-10 mx-auto flex max-w-[calc(100%-2rem)] flex-wrap items-center justify-center gap-x-2 gap-y-1">
+        <span className="text-lg sm:text-xl animate-bounce">{currentHoliday.decorations.icon}</span>
+        <span className="min-w-0 text-balance text-xs leading-snug sm:text-sm md:text-base">
+          {currentHoliday.bannerMessage}
+        </span>
+        <span className="text-lg sm:text-xl animate-bounce">{currentHoliday.decorations.icon}</span>
       </div>
 
       <button

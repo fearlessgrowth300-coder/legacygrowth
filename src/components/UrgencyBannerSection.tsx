@@ -33,21 +33,21 @@ export function UrgencyBannerSection() {
   };
 
   return (
-    <section className="bg-gradient-to-r from-red-600 to-red-700 border-t-2 border-accent" style={{ minHeight: '64px' }}>
-      <div className="container mx-auto px-4 py-2 sm:py-3 flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-6">
-        <div className="flex flex-col sm:flex-row items-center sm:items-start gap-3 sm:gap-4 text-center sm:text-left">
+    <section className="overflow-hidden bg-gradient-to-r from-red-600 to-red-700 border-t-2 border-accent" style={{ minHeight: '64px' }}>
+      <div className="container mx-auto px-3 sm:px-4 py-2 sm:py-3 flex flex-col lg:flex-row items-center justify-between gap-3 lg:gap-6">
+        <div className="flex min-w-0 flex-col sm:flex-row items-center sm:items-start gap-2 sm:gap-4 text-center sm:text-left">
           <Flame className="h-8 w-8 sm:h-10 sm:w-10 text-white animate-pulse flex-shrink-0 bg-white/20 rounded-full p-2" />
-          <div>
-            <h3 className="text-lg sm:text-xl font-serif font-bold text-white">
+          <div className="min-w-0">
+            <h3 className="mx-auto max-w-[20rem] text-base sm:text-xl font-serif font-bold text-white text-balance">
               🔥 Only 3 Spots Left for {getCurrentMonth()} Setup
             </h3>
-            <p className="text-white/90 text-sm">
+            <p className="mx-auto max-w-[20rem] text-white/90 text-xs sm:text-sm text-balance">
               Get your store ready to sell in 72 hours. Secure your spot today.
             </p>
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+        <div className="flex w-full flex-col sm:w-auto sm:flex-row items-center gap-3 sm:gap-6">
           <div className="flex items-center gap-2 sm:gap-4 text-white" style={{ minHeight: '32px' }}>
             <Clock className="h-4 w-4 sm:h-5 sm:w-5" />
             <span className="flex gap-1 sm:gap-2 text-xs sm:text-sm font-mono">
