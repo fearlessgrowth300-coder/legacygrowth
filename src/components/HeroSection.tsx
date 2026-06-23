@@ -3,7 +3,21 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { TwoStepCTAModal } from "@/components/TwoStepCTAModal";
 import { MessageCircle, Mail, Star, TrendingUp, DollarSign } from "lucide-react";
-import heroFunnelDashboard from "@/assets/hero-funnel-dashboard.jpg";
+import heroLifestyle1 from "@/assets/hero-lifestyle-1.jpg";
+import heroLifestyle2 from "@/assets/hero-lifestyle-2.jpg";
+import heroLifestyle3 from "@/assets/hero-lifestyle-3.jpg";
+import heroLifestyle4 from "@/assets/hero-lifestyle-4.jpg";
+import heroLifestyle5 from "@/assets/hero-lifestyle-5.jpg";
+import heroLifestyle6 from "@/assets/hero-lifestyle-6.jpg";
+
+const heroLifestylePhotos = [
+  { src: heroLifestyle3, alt: "Beach lifestyle freedom after building a digital product business" },
+  { src: heroLifestyle6, alt: "Boat lifestyle scene representing family freedom and flexible income" },
+  { src: heroLifestyle5, alt: "Luxury beach lifestyle representing digital product freedom" },
+  { src: heroLifestyle1, alt: "Yacht lifestyle scene representing freedom from the daily grind" },
+  { src: heroLifestyle2, alt: "Cafe lifestyle scene representing flexible creator income" },
+  { src: heroLifestyle4, alt: "Travel lifestyle scene representing freedom through online business" },
+];
 
 export function HeroSection() {
   const [showCTAModal, setShowCTAModal] = useState(false);
@@ -44,16 +58,16 @@ export function HeroSection() {
               </Card>
             </div>
 
-            <h1 className="mx-auto max-w-[20rem] text-[1.85rem] leading-[1.08] sm:max-w-2xl sm:text-4xl md:text-5xl lg:mx-0 lg:text-7xl font-serif font-bold text-white mb-5 lg:mb-6">
-              Struggling to Get Sales? Here's How to Turn Your Digital Products Into Revenue
+            <h1 className="mx-auto max-w-[21rem] text-[1.7rem] leading-[1.08] sm:max-w-2xl sm:text-4xl md:text-5xl lg:mx-0 lg:max-w-3xl lg:text-5xl xl:text-6xl font-serif font-bold text-white mb-5 lg:mb-6">
+              Turn Your Digital Product Into True Family Freedom. Live the Dream. We'll Handle the Sales.
             </h1>
             
-            <h2 className="mx-auto max-w-[20rem] text-base sm:max-w-xl sm:text-xl lg:mx-0 lg:text-2xl text-white/90 mb-4 font-medium font-serif">
-              Professional Sales Funnel Setup That Gets Results in 7-14 Days
+            <h2 className="mx-auto max-w-[21rem] text-base sm:max-w-xl sm:text-xl lg:mx-0 lg:text-2xl text-white/90 mb-4 font-medium font-serif">
+              Ready to achieve the financial freedom you bought that digital product for? We partner with creators and entrepreneurs to market your products and maximize your revenue.
             </h2>
             
-            <p className="text-sm sm:text-lg text-white/80 mb-8 max-w-[20rem] sm:max-w-xl mx-auto lg:mx-0 leading-relaxed">
-              If you have a digital product but struggle to get consistent sales, I can help. Expert funnel setup and optimization service that helped 100+ digital marketers generate their first $424+ in overnight sales. No tech skills required—I handle everything for you.
+            <p className="text-sm sm:text-lg text-white/80 mb-8 max-w-[21rem] sm:max-w-xl mx-auto lg:mx-0 leading-relaxed">
+              If you have a digital product or course but are struggling to get consistent sales, you don't have to figure out marketing alone. We specialize in helping everyday entrepreneurs, busy moms, and creators turn their digital assets into steady revenue. No marketing experience required - we handle the strategy to help you unlock the ultimate freedom for your family.
             </p>
 
             {/* CTA Buttons */}
@@ -86,35 +100,46 @@ export function HeroSection() {
                 <div className="flex items-center gap-2 sm:gap-4 text-white">
                   <div className="flex items-center gap-1 sm:gap-2">
                     <DollarSign className="h-4 w-4 text-green-400 flex-shrink-0" />
-                    <span className="text-xs sm:text-sm text-center lg:text-left">Helping everyday people turn digital skills into passive income</span>
+                    <span className="text-xs sm:text-sm text-center lg:text-left">Helping everyday people turn digital products into family freedom</span>
                   </div>
                 </div>
               </Card>
             </div>
           </div>
 
-          {/* Right Column - Hero Image */}
+          {/* Right Column - Lifestyle Photo Collage */}
           <div className="relative order-1 flex items-center justify-center lg:order-2">
-            <div className="relative w-full max-w-[20rem] sm:max-w-xl mx-auto">
-              <div className="relative overflow-hidden rounded-2xl border border-white/15 bg-white/10 shadow-luxury">
-                <img
-                  src={heroFunnelDashboard}
-                  alt="Digital product sales funnel dashboard with phone storefront and revenue growth visuals"
-                  width={1717}
-                  height={916}
-                  loading="eager"
-                  decoding="async"
-                  fetchPriority="high"
-                  className="aspect-[1717/916] w-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-luxury-black/45 via-transparent to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4 grid grid-cols-3 gap-2">
-                  {["Funnel Ready", "Store Live", "Payments Set"].map((label) => (
-                    <div
-                      key={label}
-                      className="rounded-lg border border-white/15 bg-black/35 px-3 py-2 text-center text-[11px] font-semibold text-white backdrop-blur-sm sm:text-xs"
-                    >
-                      {label}
+            <div className="relative w-full max-w-[21rem] sm:max-w-xl lg:max-w-2xl mx-auto">
+              <div className="relative overflow-hidden rounded-2xl border border-white/15 bg-white/10 p-2 shadow-luxury backdrop-blur-sm">
+                <div className="grid grid-cols-5 gap-2">
+                  <div className="relative col-span-5 overflow-hidden rounded-xl">
+                    <img
+                      src={heroLifestylePhotos[0].src}
+                      alt={heroLifestylePhotos[0].alt}
+                      width={736}
+                      height={981}
+                      loading="eager"
+                      decoding="async"
+                      fetchPriority="high"
+                      className="aspect-[16/10] w-full object-cover object-center"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-luxury-black/45 via-transparent to-transparent" />
+                    <div className="absolute bottom-3 left-3 right-3 rounded-lg border border-white/15 bg-black/35 px-3 py-2 text-center text-xs font-semibold text-white backdrop-blur-sm sm:text-sm">
+                      Freedom starts when your product finally sells
+                    </div>
+                  </div>
+
+                  {heroLifestylePhotos.slice(1).map((photo, index) => (
+                    <div key={photo.src} className="relative overflow-hidden rounded-lg border border-white/10">
+                      <img
+                        src={photo.src}
+                        alt={photo.alt}
+                        width={736}
+                        height={981}
+                        loading={index < 2 ? "eager" : "lazy"}
+                        decoding="async"
+                        className="aspect-[3/4] w-full object-cover object-center"
+                      />
                     </div>
                   ))}
                 </div>
