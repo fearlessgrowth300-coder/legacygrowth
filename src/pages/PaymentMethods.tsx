@@ -92,12 +92,12 @@ export default function PaymentMethods() {
         package_type: finalAmount,
       });
 
-      let receiptUrl = null;
+      let receiptPath: string | null = null;
 
       // Upload receipt if provided
       if (receiptFile) {
-        const fileName = `${Date.now()}_${receiptFile.name}`;
-        const { data: uploadData, error: uploadError } = await supabase.storage
+        const fileName = `submissions/${Date.now()}_${receiptFile.name}`;
+        const { error: uploadError } = await supabase.storage
           .from('receipts')
           .upload(fileName, receiptFile);
 
@@ -105,39 +105,26 @@ export default function PaymentMethods() {
           throw new Error("Failed to upload receipt");
         }
 
-        const { data: urlData } = supabase.storage
-          .from('receipts')
-          .getPublicUrl(fileName);
-        
-        receiptUrl = urlData.publicUrl;
+        receiptPath = fileName;
       }
 
-      // Insert submission
-      const { data: submission, error: insertError } = await supabase
-        .from('payment_submissions')
-        .insert({
+      // Submit via edge function (inserts with service role + sends emails)
+      const { error: emailError } = await supabase.functions.invoke('send-payment-email', {
+        body: {
           full_name: validatedData.full_name,
           email: validatedData.email,
           whatsapp: validatedData.whatsapp,
           amount: validatedData.amount,
           package_type: validatedData.package_type,
-          receipt_url: receiptUrl,
-        })
-        .select()
-        .single();
-
-      if (insertError) {
-        throw new Error("Failed to submit payment");
-      }
-
-      // Trigger email sending
-      const { error: emailError } = await supabase.functions.invoke('send-payment-email', {
-        body: { submissionId: submission.id }
+          receipt_path: receiptPath,
+        }
       });
 
       if (emailError) {
         console.error("Email error:", emailError);
+        throw new Error("Failed to submit payment");
       }
+
 
       toast.success("Receipt submitted successfully! Check your email for confirmation.");
       
