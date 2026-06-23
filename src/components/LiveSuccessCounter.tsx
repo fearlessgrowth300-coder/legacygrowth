@@ -7,9 +7,21 @@ interface CounterProps {
   duration?: number;
   suffix?: string;
   prefix?: string;
+  format?: "standard" | "compact";
 }
 
-function AnimatedCounter({ end, duration = 2000, suffix = "", prefix = "" }: CounterProps) {
+function formatCounterValue(value: number, format: CounterProps["format"] = "standard") {
+  if (format === "compact") {
+    return new Intl.NumberFormat("en-US", {
+      notation: "compact",
+      maximumFractionDigits: 1,
+    }).format(value);
+  }
+
+  return value.toLocaleString();
+}
+
+function AnimatedCounter({ end, duration = 2000, suffix = "", prefix = "", format = "standard" }: CounterProps) {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -33,7 +45,7 @@ function AnimatedCounter({ end, duration = 2000, suffix = "", prefix = "" }: Cou
   }, [end, duration]);
 
   return (
-    <span>{prefix}{count.toLocaleString()}{suffix}</span>
+    <span>{prefix}{formatCounterValue(count, format)}{suffix}</span>
   );
 }
 
@@ -55,7 +67,7 @@ export function LiveSuccessCounter() {
 
   const stats = [
     { icon: Users, label: "Success Stories", value: 147, suffix: "+", color: "text-blue-500" },
-    { icon: DollarSign, label: "Client Revenue Generated", value: 12500000, prefix: "$", suffix: "+", color: "text-green-500" },
+    { icon: DollarSign, label: "Client Revenue Generated", value: 12500000, prefix: "$", suffix: "+", color: "text-green-500", format: "compact" as const },
     { icon: Zap, label: "Funnels Built", value: 289, suffix: "+", color: "text-purple-500" },
     { icon: Target, label: "Average ROI Increase", value: 247, suffix: "%", color: "text-orange-500" },
   ];
@@ -78,7 +90,7 @@ export function LiveSuccessCounter() {
             return (
               <Card
                 key={index}
-                className="p-6 text-center hover:scale-105 transition-all duration-300 hover:shadow-xl backdrop-blur-sm bg-card/50 border-2 hover:border-primary/50"
+                className="min-w-0 overflow-hidden p-6 text-center hover:scale-105 transition-all duration-300 hover:shadow-xl backdrop-blur-sm bg-card/50 border-2 hover:border-primary/50"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="flex justify-center mb-4">
@@ -87,11 +99,11 @@ export function LiveSuccessCounter() {
                   </div>
                 </div>
                 {/* Fixed height container for counter to prevent CLS */}
-                <div className="text-4xl md:text-5xl font-bold mb-2 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent" style={{ minHeight: '3.5rem' }}>
+                <div className="mb-2 min-w-0 truncate bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-4xl font-bold text-transparent md:text-5xl" style={{ minHeight: '3.5rem' }}>
                   {isInView ? (
-                    <AnimatedCounter end={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
+                    <AnimatedCounter end={stat.value} prefix={stat.prefix} suffix={stat.suffix} format={stat.format} />
                   ) : (
-                    <span>{stat.prefix}0{stat.suffix}</span>
+                    <span>{stat.prefix}{formatCounterValue(0, stat.format)}{stat.suffix}</span>
                   )}
                 </div>
                 <p className="text-sm text-muted-foreground font-medium">{stat.label}</p>
