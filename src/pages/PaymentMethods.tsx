@@ -96,8 +96,8 @@ export default function PaymentMethods() {
 
       // Upload receipt if provided
       if (receiptFile) {
-        const fileName = `${Date.now()}_${receiptFile.name}`;
-        const { data: uploadData, error: uploadError } = await supabase.storage
+        const fileName = `submissions/${Date.now()}_${receiptFile.name}`;
+        const { error: uploadError } = await supabase.storage
           .from('receipts')
           .upload(fileName, receiptFile);
 
@@ -105,15 +105,12 @@ export default function PaymentMethods() {
           throw new Error("Failed to upload receipt");
         }
 
-        const { data: urlData } = supabase.storage
-          .from('receipts')
-          .getPublicUrl(fileName);
-        
-        receiptUrl = urlData.publicUrl;
+        // Store storage path; backend signs URLs as needed.
+        receiptUrl = fileName;
       }
 
-      // Insert submission
-      const { data: submission, error: insertError } = await supabase
+      // Insert submission (no SELECT — anon has insert-only access)
+      const { error: insertError } = await supabase
         .from('payment_submissions')
         .insert({
           full_name: validatedData.full_name,
@@ -122,9 +119,8 @@ export default function PaymentMethods() {
           amount: validatedData.amount,
           package_type: validatedData.package_type,
           receipt_url: receiptUrl,
-        })
-        .select()
-        .single();
+        });
+
 
       if (insertError) {
         throw new Error("Failed to submit payment");
