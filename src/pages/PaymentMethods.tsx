@@ -92,7 +92,7 @@ export default function PaymentMethods() {
         package_type: finalAmount,
       });
 
-      let receiptUrl = null;
+      let receiptPath: string | null = null;
 
       // Upload receipt if provided
       if (receiptFile) {
@@ -105,35 +105,26 @@ export default function PaymentMethods() {
           throw new Error("Failed to upload receipt");
         }
 
-        // Store storage path; backend signs URLs as needed.
-        receiptUrl = fileName;
+        receiptPath = fileName;
       }
 
-      // Insert submission (no SELECT — anon has insert-only access)
-      const { error: insertError } = await supabase
-        .from('payment_submissions')
-        .insert({
+      // Submit via edge function (inserts with service role + sends emails)
+      const { error: emailError } = await supabase.functions.invoke('send-payment-email', {
+        body: {
           full_name: validatedData.full_name,
           email: validatedData.email,
           whatsapp: validatedData.whatsapp,
           amount: validatedData.amount,
           package_type: validatedData.package_type,
-          receipt_url: receiptUrl,
-        });
-
-
-      if (insertError) {
-        throw new Error("Failed to submit payment");
-      }
-
-      // Trigger email sending
-      const { error: emailError } = await supabase.functions.invoke('send-payment-email', {
-        body: { submissionId: submission.id }
+          receipt_path: receiptPath,
+        }
       });
 
       if (emailError) {
         console.error("Email error:", emailError);
+        throw new Error("Failed to submit payment");
       }
+
 
       toast.success("Receipt submitted successfully! Check your email for confirmation.");
       
