@@ -20,7 +20,7 @@ export function FAQSection() {
     },
     {
       question: "How do I know this isn't a scam?",
-      answer: "I understand your concern - the digital marketing space has many bad actors. Here's what makes Legacy Growth different: 100+ verified client testimonials with real dollar amounts and screenshots, transparent pricing (no hidden fees or upsells), 30-day money-back guarantee on setup quality, portfolio of live client stores you can review, and direct client references available upon request. You're protected every step of the way."
+      answer: "I understand your concern - the digital marketing space has many bad actors. Here's what makes Legacy Falcon Marketing different: 100+ verified client testimonials with real dollar amounts and screenshots, transparent pricing (no hidden fees or upsells), 30-day money-back guarantee on setup quality, portfolio of live client stores you can review, and direct client references available upon request. You're protected every step of the way."
     },
     {
       question: "Do you offer refunds or guarantees?",

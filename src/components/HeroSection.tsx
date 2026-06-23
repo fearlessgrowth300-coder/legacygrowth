@@ -5,13 +5,12 @@ import { TwoStepCTAModal } from "@/components/TwoStepCTAModal";
 import { MessageCircle, Mail, Star, TrendingUp, DollarSign } from "lucide-react";
 import heroLifestyle1 from "@/assets/hero-lifestyle-1.jpg";
 import heroLifestyle2 from "@/assets/hero-lifestyle-2.jpg";
-import heroLifestyle3 from "@/assets/hero-lifestyle-3.jpg";
 import heroLifestyle4 from "@/assets/hero-lifestyle-4.jpg";
 import heroLifestyle5 from "@/assets/hero-lifestyle-5.jpg";
 import heroLifestyle6 from "@/assets/hero-lifestyle-6.jpg";
 
 const heroLifestylePhotos = [
-  { src: heroLifestyle3, alt: "Beach lifestyle freedom after building a digital product business" },
+  { src: "/legacy-falcon-og.jpg", alt: "Legacy Falcon Marketing beach lifestyle freedom for digital product owners" },
   { src: heroLifestyle6, alt: "Boat lifestyle scene representing family freedom and flexible income" },
   { src: heroLifestyle5, alt: "Luxury beach lifestyle representing digital product freedom" },
   { src: heroLifestyle1, alt: "Yacht lifestyle scene representing freedom from the daily grind" },
@@ -47,13 +46,13 @@ export function HeroSection() {
               <Card className="p-2 sm:p-3 bg-white/10 border-white/20 backdrop-blur-sm">
                 <div className="flex items-center gap-2 text-white">
                   <Star className="h-4 w-4 text-yellow-400" />
-                  <span className="text-xs sm:text-sm font-medium">Digital Expert</span>
+                  <span className="text-xs sm:text-sm font-medium">Legacy Falcon Marketing</span>
                 </div>
               </Card>
               <Card className="p-2 sm:p-3 bg-white/10 border-white/20 backdrop-blur-sm">
                 <div className="flex items-center gap-2 text-white">
                   <TrendingUp className="h-4 w-4 text-green-400" />
-                  <span className="text-xs sm:text-sm font-medium">Proven Results</span>
+                  <span className="text-xs sm:text-sm font-medium">Strategic Product Sales</span>
                 </div>
               </Card>
             </div>
@@ -117,6 +116,7 @@ export function HeroSection() {
                       loading="eager"
                       decoding="async"
                       fetchPriority="high"
+                      sizes="(min-width: 1024px) 48vw, 86vw"
                       className="aspect-[16/10] w-full object-cover object-center"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-luxury-black/45 via-transparent to-transparent" />
@@ -132,8 +132,9 @@ export function HeroSection() {
                         alt={photo.alt}
                         width={736}
                         height={981}
-                        loading={index < 2 ? "eager" : "lazy"}
+                        loading="lazy"
                         decoding="async"
+                        sizes="(min-width: 1024px) 9vw, 17vw"
                         className="aspect-[3/4] w-full object-cover object-center"
                       />
                     </div>

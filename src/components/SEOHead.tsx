@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
 interface SEOHeadProps {
   title?: string;
@@ -6,7 +6,7 @@ interface SEOHeadProps {
   keywords?: string;
   image?: string;
   url?: string;
-  schema?: 'home' | 'blog' | 'article';
+  schema?: "home" | "blog" | "article";
   articleData?: {
     headline: string;
     datePublished: string;
@@ -16,145 +16,129 @@ interface SEOHeadProps {
   };
 }
 
-export function SEOHead({ 
-  title = "How to Get More Sales from Your Digital Products | Expert Funnel Setup by Harper Harvey",
-  description = "Struggling to get sales from your digital products? I help digital marketers set up high-converting sales funnels that generate consistent revenue. 100+ clients achieved $424+ in first-night sales with proven funnel strategies. Expert in course promotion, store optimization, and Instagram marketing automation.",
-  keywords = "how to get more sales digital products, how to promote my course online, sales funnel setup service, digital marketing consultant for sales, increase course sales fast, funnel optimization expert, Beacons store setup help, Instagram marketing automation, course launch strategy, digital product sales help, conversion rate optimization, online store setup expert, sales funnel builder service, digital marketing sales specialist",
-  image = "/assets/hero-image.jpg",
-  url = "https://legacygrowth.site",
-  schema = 'home',
-  articleData
+const DEFAULT_URL = "https://legacygrowth.site/";
+const DEFAULT_IMAGE = `${DEFAULT_URL}legacy-falcon-og.jpg`;
+
+function setMeta(selector: string, content: string) {
+  const tag = document.querySelector(selector);
+  if (tag) {
+    tag.setAttribute("content", content);
+  }
+}
+
+export function SEOHead({
+  title = "Legacy Falcon Marketing | Digital Product Marketing & Sales Funnel Strategy",
+  description = "Legacy Falcon Marketing helps creators, busy moms, and product owners turn digital products and courses into consistent sales with fast, strategic marketing systems, sales funnels, content strategy, and conversion-focused launch support.",
+  keywords = "Legacy Falcon Marketing, digital product marketing, sales funnel strategy, course marketing, digital product sales, marketing for creators, marketing for busy moms, content strategy, conversion optimization, online course sales, family freedom marketing, digital product launch support",
+  image = DEFAULT_IMAGE,
+  url = DEFAULT_URL,
+  schema = "home",
+  articleData,
 }: SEOHeadProps) {
-  
   useEffect(() => {
-    // Update meta tags dynamically
     document.title = title;
-    
-    // Update description
-    const descriptionMeta = document.querySelector('meta[name="description"]');
-    if (descriptionMeta) {
-      descriptionMeta.setAttribute('content', description);
+
+    setMeta('meta[name="description"]', description);
+    setMeta('meta[name="keywords"]', keywords);
+    setMeta('meta[property="og:title"]', title);
+    setMeta('meta[property="og:description"]', description);
+    setMeta('meta[property="og:image"]', image);
+    setMeta('meta[property="og:url"]', url);
+    setMeta('meta[property="og:site_name"]', "Legacy Falcon Marketing");
+    setMeta('meta[name="twitter:title"]', title);
+    setMeta('meta[property="twitter:title"]', title);
+    setMeta('meta[name="twitter:description"]', description);
+    setMeta('meta[property="twitter:description"]', description);
+    setMeta('meta[name="twitter:image"]', image);
+    setMeta('meta[property="twitter:image"]', image);
+
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+      canonical.setAttribute("href", url);
     }
-    
-    // Update keywords
-    const keywordsMeta = document.querySelector('meta[name="keywords"]');
-    if (keywordsMeta) {
-      keywordsMeta.setAttribute('content', keywords);
-    }
-    
-    // Update Open Graph tags
-    const ogTitle = document.querySelector('meta[property="og:title"]');
-    if (ogTitle) {
-      ogTitle.setAttribute('content', title);
-    }
-    
-    const ogDescription = document.querySelector('meta[property="og:description"]');
-    if (ogDescription) {
-      ogDescription.setAttribute('content', description);
-    }
-    
-    const ogImage = document.querySelector('meta[property="og:image"]');
-    if (ogImage) {
-      ogImage.setAttribute('content', image);
-    }
-    
-    const ogUrl = document.querySelector('meta[property="og:url"]');
-    if (ogUrl) {
-      ogUrl.setAttribute('content', url);
-    }
-    
-    // Update Twitter tags
-    const twitterTitle = document.querySelector('meta[property="twitter:title"]');
-    if (twitterTitle) {
-      twitterTitle.setAttribute('content', title);
-    }
-    
-    const twitterDescription = document.querySelector('meta[property="twitter:description"]');
-    if (twitterDescription) {
-      twitterDescription.setAttribute('content', description);
-    }
-    
-    const twitterImage = document.querySelector('meta[property="twitter:image"]');
-    if (twitterImage) {
-      twitterImage.setAttribute('content', image);
-    }
-    
-    // Add JSON-LD structured data
-    let existingScript = document.getElementById('structured-data');
+
+    const existingScript = document.getElementById("structured-data");
     if (existingScript) {
       existingScript.remove();
     }
 
     const structuredDataGraph: any[] = [
-      // Organization Schema
       {
         "@type": "Organization",
         "@id": `${url}#organization`,
-        "name": "Legacy Growth",
+        "name": "Legacy Falcon Marketing",
         "url": url,
-        "logo": {
-          "@type": "ImageObject",
-          "url": `${url}/assets/hero-image.jpg`
-        },
-        "founder": {
-          "@type": "Person",
-          "name": "Harper Harvey",
-          "jobTitle": "Digital Marketing Sales & Funnel Optimization Expert",
-          "description": "Expert digital marketing consultant specializing in sales funnel setup, course promotion, and conversion optimization. Helped 100+ clients generate consistent sales from digital products.",
-          "knowsAbout": ["Sales Funnel Optimization", "Course Promotion", "Digital Marketing", "Conversion Rate Optimization", "Instagram Marketing", "Marketing Automation"]
+        "logo": `${url}lovable-uploads/1ac5c1da-8ff3-4010-8711-65a5cd12e793.png`,
+        "image": image,
+        "slogan": "Speed, sharp vision, precision, power, and freedom for digital product owners.",
+        "description": "Legacy Falcon Marketing helps creators, entrepreneurs, busy moms, and course owners market digital products with strategic sales funnels, sharp positioning, content systems, and conversion-focused launch support.",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "telephone": "+1-302-329-5673",
+          "availableLanguage": "English"
         },
         "sameAs": [
-          "https://www.instagram.com/legacygrowth",
-          "https://legacygrowth.site"
+          "https://wa.me/13023295673"
         ]
       },
-      // Service Schema
+      {
+        "@type": "WebSite",
+        "@id": `${url}#website`,
+        "url": url,
+        "name": "Legacy Falcon Marketing",
+        "publisher": {
+          "@id": `${url}#organization`
+        },
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": `${url}#professional-service`,
+        "name": "Legacy Falcon Marketing",
+        "url": url,
+        "image": image,
+        "description": "Digital product marketing, course sales funnel strategy, product positioning, content strategy, launch support, and conversion optimization for creators and entrepreneurs.",
+        "areaServed": "Worldwide",
+        "provider": {
+          "@id": `${url}#organization`
+        },
+        "serviceType": [
+          "Digital product marketing",
+          "Sales funnel strategy",
+          "Course marketing",
+          "Conversion optimization",
+          "Content marketing strategy"
+        ]
+      },
       {
         "@type": "Service",
-        "@id": `${url}#service`,
-        "serviceType": "Digital Marketing Sales Funnel Setup",
+        "@id": `${url}#digital-product-marketing-service`,
+        "name": "Digital Product Marketing and Sales Funnel Strategy",
+        "serviceType": "Digital Product Marketing",
         "provider": {
           "@id": `${url}#organization`
         },
         "areaServed": "Worldwide",
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Digital Marketing Services",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Course Promotion & Launch Strategy",
-                "description": "Complete course promotion setup with proven sales funnels that convert visitors into paying students"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Sales Funnel Optimization",
-                "description": "Expert funnel optimization to increase conversion rates and maximize revenue from existing traffic"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Digital Store Setup",
-                "description": "Professional Beacons and digital store setup with conversion-optimized design and automation"
-              }
-            }
-          ]
+        "description": "Strategic marketing systems that help product owners move fast, find the right audience, sharpen their message, and turn digital products or courses into consistent revenue.",
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock",
+          "url": url
         }
       },
-      // Webpage Schema
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
         "url": url,
         "name": title,
         "description": description,
+        "isPartOf": {
+          "@id": `${url}#website`
+        },
+        "about": {
+          "@id": `${url}#digital-product-marketing-service`
+        },
         "publisher": {
           "@id": `${url}#organization`
         },
@@ -162,16 +146,15 @@ export function SEOHead({
       }
     ];
 
-    // Add Article schema if article data is provided
-    if (schema === 'article' && articleData) {
+    if (schema === "article" && articleData) {
       structuredDataGraph.push({
         "@type": "Article",
         "headline": articleData.headline,
         "datePublished": articleData.datePublished,
         "dateModified": articleData.dateModified || articleData.datePublished,
         "author": {
-          "@type": "Person",
-          "name": articleData.author
+          "@type": "Organization",
+          "name": articleData.author || "Legacy Falcon Marketing"
         },
         "publisher": {
           "@id": `${url}#organization`
@@ -182,17 +165,14 @@ export function SEOHead({
       });
     }
 
-    const structuredData = {
+    const script = document.createElement("script");
+    script.id = "structured-data";
+    script.type = "application/ld+json";
+    script.textContent = JSON.stringify({
       "@context": "https://schema.org",
       "@graph": structuredDataGraph
-    };
-
-    const script = document.createElement('script');
-    script.id = 'structured-data';
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(structuredData);
+    });
     document.head.appendChild(script);
-    
   }, [title, description, keywords, image, url, schema, articleData]);
 
   return null;

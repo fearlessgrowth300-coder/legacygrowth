@@ -1,5 +1,6 @@
 import { useState, lazy, Suspense } from "react";
 import { HeroSection } from "@/components/HeroSection";
+import { BrandPillarsSection } from "@/components/BrandPillarsSection";
 import { WhoIHelpSection } from "@/components/WhoIHelpSection";
 import { PickYourPathSection } from "@/components/PickYourPathSection";
 import { SEOHead } from "@/components/SEOHead";
@@ -95,6 +96,7 @@ const Index = () => {
       </section>
       
       <HeroSection />
+      <BrandPillarsSection />
       <TrustedLogosSection />
       <LiveSuccessCounter />
       <WhoIHelpSection />
