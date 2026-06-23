@@ -23,6 +23,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 // Lazy-loaded heavy components
 const PortfolioSection = lazy(() => import("@/components/PortfolioSection").then(m => ({ default: m.PortfolioSection })));
+const ContentStudioSection = lazy(() => import("@/components/ContentStudioSection").then(m => ({ default: m.ContentStudioSection })));
 const ROICalculator = lazy(() => import("@/components/ROICalculator").then(m => ({ default: m.ROICalculator })));
 const HowItWorksSection = lazy(() => import("@/components/HowItWorksSection").then(m => ({ default: m.HowItWorksSection })));
 const ResultsGallerySection = lazy(() => import("@/components/ResultsGallerySection").then(m => ({ default: m.ResultsGallerySection })));
@@ -106,7 +107,13 @@ const Index = () => {
           <PortfolioSection />
         </Suspense>
       </LazySection>
-      
+
+      <LazySection fallbackHeight="min-h-[600px]">
+        <Suspense fallback={<SectionSkeleton height="min-h-[600px]" />}>
+          <ContentStudioSection />
+        </Suspense>
+      </LazySection>
+
       {/* Quiz CTA Section */}
       <section className="py-16 bg-gradient-luxury">
         <div className="container mx-auto px-4 text-center">
