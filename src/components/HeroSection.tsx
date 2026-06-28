@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { TwoStepCTAModal } from "@/components/TwoStepCTAModal";
@@ -21,6 +21,15 @@ const heroLifestylePhotos = [
 export function HeroSection() {
   const [showCTAModal, setShowCTAModal] = useState(false);
   const [ctaType, setCTAType] = useState<"general" | "funnel" | "setup">("general");
+  const [activePhoto, setActivePhoto] = useState(0);
+
+  // Crossfade through the hero photos
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActivePhoto((p) => (p + 1) % heroLifestylePhotos.length);
+    }, 3500);
+    return () => clearInterval(timer);
+  }, []);
 
   const handleWhatsAppClick = () => {
     setCTAType("general");
@@ -33,113 +42,86 @@ export function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-[calc(100svh-56px)] flex items-center justify-center overflow-hidden bg-gradient-hero">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,hsl(var(--accent)/0.18),transparent_32%),linear-gradient(135deg,hsl(var(--luxury-navy)),hsl(var(--primary)),hsl(var(--secondary)))]" />
-      <div className="absolute inset-0 bg-black/25 z-[1]" />
+    <section className="relative flex items-center justify-center overflow-hidden bg-[hsl(222,33%,11%)]">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_30%,hsl(var(--primary)/0.16),transparent_45%)]" />
 
-      <div className="container mx-auto px-4 pt-8 pb-16 relative z-10">
-        <div className="grid lg:grid-cols-[1.02fr_0.98fr] gap-6 lg:gap-12 items-center">
+      <div className="mx-auto max-w-[1280px] px-5 md:px-8 pt-12 pb-14 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Column - Content */}
           <div className="order-2 text-center lg:order-1 lg:text-left animate-fade-in">
-            {/* Success Indicators */}
-            <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 sm:gap-4 mb-6">
-              <Card className="p-2 sm:p-3 bg-white/10 border-white/20 backdrop-blur-sm">
-                <div className="flex items-center gap-2 text-white">
-                  <Star className="h-4 w-4 text-yellow-400" />
-                  <span className="text-xs sm:text-sm font-medium">Legacy Falcon Marketing</span>
-                </div>
-              </Card>
-              <Card className="p-2 sm:p-3 bg-white/10 border-white/20 backdrop-blur-sm">
-                <div className="flex items-center gap-2 text-white">
-                  <TrendingUp className="h-4 w-4 text-green-400" />
-                  <span className="text-xs sm:text-sm font-medium">Strategic Product Sales</span>
-                </div>
-              </Card>
+            {/* Brand pill (two-color, bold) */}
+            <div className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-lg mb-7">
+              <Star className="h-4 w-4 text-primary fill-primary flex-shrink-0" />
+              <span className="font-heading text-[11px] sm:text-sm font-extrabold uppercase tracking-wide">
+                <span className="text-primary">Legacy Falcon Marketing</span>{" "}
+                <span className="text-black">· Strategic Product Sales</span>
+              </span>
             </div>
 
-            <h1 className="mx-auto max-w-[21rem] text-[1.7rem] leading-[1.08] sm:max-w-2xl sm:text-4xl md:text-5xl lg:mx-0 lg:max-w-3xl lg:text-5xl xl:text-6xl font-serif font-bold text-white mb-5 lg:mb-6">
-              Turn Your Digital Product Into True Family Freedom. Live the Dream. We'll Handle the Sales.
+            {/* Headline — big, white, uppercase, heavy */}
+            <h1 className="font-heading text-[2.1rem] leading-[1.03] sm:text-5xl lg:text-6xl font-black uppercase text-white mb-7 max-w-[22rem] sm:max-w-xl lg:max-w-none mx-auto lg:mx-0">
+              Turn Your Digital Product Into{" "}
+              <span className="text-primary">True Family Freedom</span>
             </h1>
-            
-            <h2 className="mx-auto max-w-[21rem] text-base sm:max-w-xl sm:text-xl lg:mx-0 lg:text-2xl text-white/90 mb-8 font-medium font-serif">
-              Ready to achieve the financial freedom you bought that digital product for? We partner with creators and entrepreneurs to market your products and maximize your revenue.
-            </h2>
+
+            {/* Star rating */}
+            <div className="flex items-center justify-center lg:justify-start gap-3 mb-8">
+              <div className="flex gap-0.5">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star key={i} className="h-5 w-5 text-amber-400 fill-amber-400" />
+                ))}
+              </div>
+              <span className="font-heading text-sm font-extrabold uppercase tracking-wide text-white">
+                Rated 4.9/5 by 1,000+ Clients
+              </span>
+            </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
               <Button
                 size="xl"
-                variant="whatsapp"
                 onClick={handleWhatsAppClick}
-                className="group text-sm sm:text-base px-4 sm:px-6 py-3 sm:py-4 shadow-lg hover:shadow-xl"
+                className="group rounded-full font-heading font-extrabold uppercase tracking-wide text-sm sm:text-base px-8 py-4 bg-primary text-primary-foreground hover:bg-primary/90 shadow-gold"
               >
                 <MessageCircle className="h-4 w-4 sm:h-5 sm:w-5 mr-2 group-hover:scale-110 transition-transform" />
-                <span className="hidden sm:inline">Start Your Transformation</span>
-                <span className="sm:hidden">Get Started</span>
+                Start Your Transformation
               </Button>
-              
+
               <Button
                 size="xl"
                 onClick={handleEmailClick}
-                className="group text-sm sm:text-base px-4 sm:px-6 py-3 sm:py-4 bg-accent text-accent-foreground hover:bg-accent/90 shadow-gold hover:shadow-glow"
+                className="group rounded-full font-heading font-extrabold uppercase tracking-wide text-sm sm:text-base px-8 py-4 bg-transparent border-2 border-white text-white hover:bg-white hover:text-black"
               >
                 <Mail className="h-4 w-4 sm:h-5 sm:w-5 mr-2 group-hover:scale-110 transition-transform" />
-                <span className="hidden sm:inline">Book Your Setup</span>
-                <span className="sm:hidden">Book Setup</span>
+                Book Your Setup
               </Button>
-            </div>
-
-            {/* Trust Indicators */}
-            <div className="mt-6 sm:mt-8 flex justify-center lg:justify-start">
-              <Card className="p-3 sm:p-4 bg-white/10 border-white/20 backdrop-blur-sm">
-                <div className="flex items-center gap-2 sm:gap-4 text-white">
-                  <div className="flex items-center gap-1 sm:gap-2">
-                    <DollarSign className="h-4 w-4 text-green-400 flex-shrink-0" />
-                    <span className="text-xs sm:text-sm text-center lg:text-left">Helping everyday people turn digital products into family freedom</span>
-                  </div>
-                </div>
-              </Card>
             </div>
           </div>
 
-          {/* Right Column - Lifestyle Photo Collage */}
-          <div className="relative order-1 flex items-center justify-center lg:order-2">
-            <div className="relative w-full max-w-[21rem] sm:max-w-xl lg:max-w-2xl mx-auto">
-              <div className="relative overflow-hidden rounded-2xl border border-white/15 bg-white/10 p-2 shadow-luxury backdrop-blur-sm">
-                <div className="grid grid-cols-5 gap-2">
-                  <div className="relative col-span-5 overflow-hidden rounded-xl">
-                    <img
-                      src={heroLifestylePhotos[0].src}
-                      alt={heroLifestylePhotos[0].alt}
-                      width={736}
-                      height={981}
-                      loading="eager"
-                      decoding="async"
-                      fetchPriority="high"
-                      sizes="(min-width: 1024px) 48vw, 86vw"
-                      className="aspect-[16/10] w-full object-cover object-center"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-luxury-black/45 via-transparent to-transparent" />
-                    <div className="absolute bottom-3 left-3 right-3 rounded-lg border border-white/15 bg-black/35 px-3 py-2 text-center text-xs font-semibold text-white backdrop-blur-sm sm:text-sm">
-                      Freedom starts when your product finally sells
-                    </div>
-                  </div>
-
-                  {heroLifestylePhotos.slice(1).map((photo, index) => (
-                    <div key={photo.src} className="relative overflow-hidden rounded-lg border border-white/10">
-                      <img
-                        src={photo.src}
-                        alt={photo.alt}
-                        width={736}
-                        height={981}
-                        loading="lazy"
-                        decoding="async"
-                        sizes="(min-width: 1024px) 9vw, 17vw"
-                        className="aspect-[3/4] w-full object-cover object-center"
-                      />
-                    </div>
-                  ))}
-                </div>
+          {/* Right Column - Image with edges blending into the black background */}
+          <div className="relative order-1 lg:order-2">
+            <div className="relative w-full">
+              <div className="relative aspect-[4/3] lg:aspect-[5/4] overflow-hidden rounded-2xl">
+                {/* Crossfading slideshow of hero photos */}
+                {heroLifestylePhotos.map((photo, i) => (
+                  <img
+                    key={photo.src}
+                    src={photo.src}
+                    alt={photo.alt}
+                    width={736}
+                    height={460}
+                    loading={i === 0 ? "eager" : "lazy"}
+                    decoding="async"
+                    fetchPriority={i === 0 ? "high" : "low"}
+                    sizes="(min-width: 1024px) 48vw, 86vw"
+                    className={`absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-1000 ${
+                      i === activePhoto ? "opacity-100" : "opacity-0"
+                    }`}
+                  />
+                ))}
+                {/* edge-blend vignette into the navy background */}
+                <div className="pointer-events-none absolute inset-0 z-10 rounded-2xl shadow-[inset_0_0_55px_22px_hsl(222,33%,11%)]" />
+                <div className="pointer-events-none absolute inset-0 z-10 rounded-2xl bg-[radial-gradient(ellipse_at_center,transparent_55%,hsl(222,33%,11%)_100%)]" />
               </div>
             </div>
           </div>

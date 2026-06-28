@@ -103,9 +103,9 @@ ${Object.entries(utmParams).filter(([key, value]) => value).map(([key, value]) =
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-lg bg-gradient-luxury text-white border-luxury-gold">
+      <DialogContent className="sm:max-w-lg bg-[hsl(222,33%,10%)] text-white border border-primary/40">
         <DialogHeader>
-          <DialogTitle className="text-center text-xl font-serif text-luxury-gold">
+          <DialogTitle className="text-center font-heading text-base font-extrabold uppercase tracking-wide text-primary">
             {step === 1 ? "Quick Question..." : "Let's Connect!"}
           </DialogTitle>
         </DialogHeader>
@@ -113,32 +113,31 @@ ${Object.entries(utmParams).filter(([key, value]) => value).map(([key, value]) =
         {step === 1 ? (
           <div className="space-y-6">
             <div className="text-center">
-              <h3 className="text-lg font-semibold mb-2">{currentQuestion.question}</h3>
-              <p className="text-white/80 text-sm">This helps me give you the most relevant advice</p>
+              <h3 className="font-heading text-xl font-bold text-white mb-2">{currentQuestion.question}</h3>
+              <p className="text-white/70 text-sm">This helps me give you the most relevant advice</p>
             </div>
 
-            <RadioGroup value={roadblockAnswer} onValueChange={setRoadblockAnswer}>
+            <RadioGroup value={roadblockAnswer} onValueChange={setRoadblockAnswer} className="space-y-1">
               {currentQuestion.options.map((option, index) => (
-                <div key={index} className="flex items-center space-x-2">
-                  <RadioGroupItem 
-                    value={option} 
+                <Label
+                  key={index}
+                  htmlFor={`option-${index}`}
+                  className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 cursor-pointer hover:border-primary/50 transition-colors"
+                >
+                  <RadioGroupItem
+                    value={option}
                     id={`option-${index}`}
-                    className="border-white/20 text-luxury-gold"
+                    className="border-white/40 text-primary"
                   />
-                  <Label 
-                    htmlFor={`option-${index}`} 
-                    className="text-white cursor-pointer text-sm"
-                  >
-                    {option}
-                  </Label>
-                </div>
+                  <span className="text-white font-medium">{option}</span>
+                </Label>
               ))}
             </RadioGroup>
 
             <Button
               onClick={() => setStep(2)}
               disabled={!roadblockAnswer}
-              className="w-full bg-luxury-gold text-luxury-black hover:bg-luxury-gold/90 font-semibold"
+              className="w-full rounded-full bg-primary text-primary-foreground hover:bg-primary/90 font-heading font-extrabold uppercase tracking-wide py-6"
             >
               Continue <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
@@ -146,8 +145,8 @@ ${Object.entries(utmParams).filter(([key, value]) => value).map(([key, value]) =
         ) : (
           <div className="space-y-6">
             <div className="text-center">
-              <h3 className="text-lg font-semibold mb-2">Perfect! Let me help you with that.</h3>
-              <p className="text-white/80 text-sm">Share your contact details so I can send you a personalized solution</p>
+              <h3 className="font-heading text-xl font-bold text-white mb-2">Perfect! Let me help you with that.</h3>
+              <p className="text-white/70 text-sm">Share your contact details so I can send you a personalized solution</p>
             </div>
 
             <div className="space-y-4">
@@ -193,7 +192,7 @@ ${Object.entries(utmParams).filter(([key, value]) => value).map(([key, value]) =
               <Button
                 onClick={handleContactSubmit}
                 disabled={!contactData.name || !contactData.email || !contactData.whatsapp}
-                className="w-full bg-luxury-gold text-luxury-black hover:bg-luxury-gold/90 font-semibold"
+                className="w-full rounded-full bg-primary text-primary-foreground hover:bg-primary/90 font-heading font-extrabold uppercase tracking-wide py-6"
               >
                 <MessageCircle className="w-4 h-4 mr-2" />
                 Get My Personalized Solution

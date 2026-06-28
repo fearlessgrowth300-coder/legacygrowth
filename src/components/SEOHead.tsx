@@ -17,7 +17,7 @@ interface SEOHeadProps {
 }
 
 const DEFAULT_URL = "https://legacygrowth.site/";
-const DEFAULT_IMAGE = `${DEFAULT_URL}legacy-falcon-og.jpg`;
+const DEFAULT_IMAGE = `${DEFAULT_URL}legacy-falcon-logo-og.jpg`;
 
 function setMeta(selector: string, content: string) {
   const tag = document.querySelector(selector);
@@ -67,8 +67,9 @@ export function SEOHead({
         "@type": "Organization",
         "@id": `${url}#organization`,
         "name": "Legacy Falcon Marketing",
+        "alternateName": ["Legacy Falcon", "Falcon Marketing", "Falcon"],
         "url": url,
-        "logo": `${url}lovable-uploads/1ac5c1da-8ff3-4010-8711-65a5cd12e793.png`,
+        "logo": `${url}favicon-512.png`,
         "image": image,
         "slogan": "Speed, sharp vision, precision, power, and freedom for digital product owners.",
         "description": "Legacy Falcon Marketing helps creators, entrepreneurs, busy moms, and course owners market digital products with strategic sales funnels, sharp positioning, content systems, and conversion-focused launch support.",

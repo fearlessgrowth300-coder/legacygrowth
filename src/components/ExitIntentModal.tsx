@@ -67,10 +67,10 @@ export function ExitIntentModal({ isOpen, onClose }: ExitIntentModalProps) {
   if (showSuccess) {
     return (
       <Dialog open={isOpen} onOpenChange={onClose}>
-        <DialogContent className="sm:max-w-md bg-gradient-luxury text-white border-luxury-gold">
+        <DialogContent className="sm:max-w-md bg-black text-white border-primary">
           <div className="text-center space-y-6 py-8">
-            <div className="mx-auto w-16 h-16 bg-luxury-gold rounded-full flex items-center justify-center">
-              <Gift className="w-8 h-8 text-luxury-black" />
+            <div className="mx-auto w-16 h-16 bg-primary rounded-full flex items-center justify-center">
+              <Gift className="w-8 h-8 text-white" />
             </div>
             <div>
               <h3 className="text-2xl font-serif font-bold mb-2">You're All Set! 🎉</h3>
@@ -81,7 +81,7 @@ export function ExitIntentModal({ isOpen, onClose }: ExitIntentModalProps) {
             <div className="space-y-3">
               <Button
                 onClick={handleCalendarClick}
-                className="w-full bg-luxury-gold text-luxury-black hover:bg-luxury-gold/90"
+                className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
               >
                 Book Your Free Strategy Call
               </Button>
@@ -101,9 +101,9 @@ export function ExitIntentModal({ isOpen, onClose }: ExitIntentModalProps) {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-lg bg-gradient-luxury text-white border-luxury-gold">
+      <DialogContent className="sm:max-w-lg bg-black text-white border-primary">
         <DialogHeader>
-          <DialogTitle className="text-center text-2xl font-serif text-luxury-gold">
+          <DialogTitle className="text-center text-2xl font-serif text-primary">
             Wait! Don't Leave Empty-Handed 🎁
           </DialogTitle>
         </DialogHeader>
@@ -111,7 +111,7 @@ export function ExitIntentModal({ isOpen, onClose }: ExitIntentModalProps) {
         <div className="space-y-6">
           {/* Offer Section */}
           <div className="text-center space-y-4 py-4">
-            <div className="flex items-center justify-center space-x-2 text-luxury-gold">
+            <div className="flex items-center justify-center space-x-2 text-primary">
               <Star className="w-5 h-5 fill-current" />
               <span className="font-semibold">FREE BONUS</span>
               <Star className="w-5 h-5 fill-current" />
@@ -122,7 +122,7 @@ export function ExitIntentModal({ isOpen, onClose }: ExitIntentModalProps) {
             <p className="text-white/90 text-sm">
               I'll personally review your current setup and send you a custom video showing exactly what to fix to start making money online.
             </p>
-            <div className="flex items-center justify-center space-x-2 text-luxury-gold text-sm">
+            <div className="flex items-center justify-center space-x-2 text-primary text-sm">
               <Clock className="w-4 h-4" />
               <span>Delivered within 24 hours</span>
             </div>
@@ -182,7 +182,7 @@ export function ExitIntentModal({ isOpen, onClose }: ExitIntentModalProps) {
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-luxury-gold text-luxury-black hover:bg-luxury-gold/90 font-semibold py-3"
+              className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold py-3"
             >
               {isSubmitting ? "Sending..." : "Get My Free Teardown →"}
             </Button>
