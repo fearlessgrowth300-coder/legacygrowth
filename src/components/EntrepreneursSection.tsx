@@ -12,7 +12,7 @@ type Review = {
 
 const reviews: Review[] = [
   {
-    name: "Bianca", // placeholder — tell me her real name to display
+    name: "Sharon R",
     avatarImg: "/testimonials/member1-avatar.jpg",
     proofImg: "/testimonials/member1-proof.jpg",
     text: "$34.5k CASH DAYYY 😭😭😭 there is no way. I started this biz on a whim in 2024, with DWA. I remember there being maybe 30,000 members at that point. Fast forward to now, and I have been having 6-figure months that consist of $34.5k days, $30k days, $45k days. It's INSANE what can be built online — all with 4k followers. I seriously went from being dependent on my husband's income to retiring him home and being the breadwinner 🤣 Forever grateful to the Falcon team program + specifically Harper for handling my business to build my own brand. My life is completely changed 🥹🤎",
