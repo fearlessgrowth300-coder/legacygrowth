@@ -23,7 +23,7 @@ const reviews: Review[] = [
     text: "I left my 9–5 today. Today marked my final day at my 9–5 job, and I was able to take this step confidently thanks to my digital marketing business and the Falcon team, which has generated over $11,800 in sales in just the last four months — all with an audience of roughly 800 followers. This is the start of a brand new chapter. By the end of this month, I'll be moving to Denmark to reunite with my family, who I've been separated from for the past several months. They were forced to rebuild their lives from zero after leaving our home country for their safety. I stayed behind to support them financially, serving as their sole provider at just 23 years old after we were unable to leave together due to financial constraints.",
   },
   {
-    name: "Member", // placeholder — tell me his real name to display
+    name: "Marcus G",
     avatarImg: "/testimonials/member3-avatar.jpg",
     proofImg: "/testimonials/member3-proof.png",
     text: "Alhamdulillah always and in every situation. 🤍 My journey hasn't been easy, but it has been worth it. As a student, I had big dreams but limited resources. I faced challenges, doubts, and moments where quitting felt easier. But I kept my faith — and the Falcon team, with their speed, vision and strong team, kept me consistent. Alhamdulillah, through the Falcon team and trust in Allah, I was able to achieve one of my biggest goals — getting my dream car while still being a student. This journey taught me discipline, patience, and belief in myself. If I can do it, you can too. Stay focused. Stay consistent. Trust the Falcon marketing plan and trust Allah. Your time is coming. 🤍✨ Thank you DWA Digital Wealth Academy for the course.",
