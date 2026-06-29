@@ -12,13 +12,13 @@ type Review = {
 
 const reviews: Review[] = [
   {
-    name: "Sharon R",
+    name: "Bianca",
     avatarImg: "/testimonials/member1-avatar.jpg",
     proofImg: "/testimonials/member1-proof.jpg",
     text: "$34.5k CASH DAYYY 😭😭😭 there is no way. I started this biz on a whim in 2024, with DWA. I remember there being maybe 30,000 members at that point. Fast forward to now, and I have been having 6-figure months that consist of $34.5k days, $30k days, $45k days. It's INSANE what can be built online — all with 4k followers. I seriously went from being dependent on my husband's income to retiring him home and being the breadwinner 🤣 Forever grateful to the Falcon team program + specifically Harper for handling my business to build my own brand. My life is completely changed 🥹🤎",
   },
   {
-    name: "Member", // placeholder — tell me her real name to display
+    name: "Sharon R",
     avatarImg: "/testimonials/member2-avatar.jpg",
     text: "I left my 9–5 today. Today marked my final day at my 9–5 job, and I was able to take this step confidently thanks to my digital marketing business and the Falcon team, which has generated over $11,800 in sales in just the last four months — all with an audience of roughly 800 followers. This is the start of a brand new chapter. By the end of this month, I'll be moving to Denmark to reunite with my family, who I've been separated from for the past several months. They were forced to rebuild their lives from zero after leaving our home country for their safety. I stayed behind to support them financially, serving as their sole provider at just 23 years old after we were unable to leave together due to financial constraints.",
   },
