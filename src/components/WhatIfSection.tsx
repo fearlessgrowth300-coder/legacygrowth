@@ -91,7 +91,7 @@ export function WhatIfSection() {
             Which Reality Do You Choose?
           </h3>
           <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-            The difference between struggling and succeeding isn't talent or luck—it's taking action when the moment is right. That moment is now.
+            The difference between struggling and succeeding isn't talent or luck it's taking action when the moment is right. That moment is now.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">

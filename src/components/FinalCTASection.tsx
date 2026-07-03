@@ -47,7 +47,7 @@ export function FinalCTASection() {
             Are You Ready To Finally Make This Work?
           </h2>
           <p className="text-xl text-white/90 max-w-4xl mx-auto leading-relaxed">
-            Whether you just got your DWA course, or you've been stuck with no sales—this is your shortcut.
+            Whether you just got your DWA course, or you've been stuck with no sales this is your shortcut.
           </p>
         </div>
 

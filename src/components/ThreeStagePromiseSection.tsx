@@ -68,7 +68,7 @@ export function ThreeStagePromiseSection() {
             </h2>
           </div>
           <p className="text-white/70 text-lg leading-relaxed lg:pt-2">
-            This isn't random help — it's a structured system that's worked for 100+
+            This isn't random help it's a structured system that's worked for 100+
             students. Here's exactly how we'll transform your digital business.
           </p>
         </div>

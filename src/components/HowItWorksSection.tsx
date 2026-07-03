@@ -76,7 +76,7 @@ export function HowItWorksSection() {
           </h2>
           <p className="text-white/70 text-lg leading-relaxed lg:pt-2">
             Here's my proven 5-step process that takes you from confused to converting in 72
-            hours — done-for-you, so you never have to guess what comes next.
+            hours done-for-you, so you never have to guess what comes next.
           </p>
         </div>
 

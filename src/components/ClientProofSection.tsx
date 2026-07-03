@@ -4,11 +4,11 @@ import { Button } from "@/components/ui/button";
 import { getWhatsAppLink } from "@/config/whatsapp";
 
 // Real client sales screenshots (revenue dashboards + testimonial DMs).
-// Files live in /public/proof — see public/proof/proof-*.jpg
+// Files live in /public/proof see public/proof/proof-*.jpg
 const PROOF_COUNT = 16;
 const proofImages = Array.from({ length: PROOF_COUNT }, (_, i) => ({
   src: `/proof/proof-${i + 1}.jpg`,
-  alt: `Verified client sales result screenshot ${i + 1} — Legacy Falcon Marketing`,
+  alt: `Verified client sales result screenshot ${i + 1} Legacy Falcon Marketing`,
 }));
 
 export function ClientProofSection() {
@@ -51,7 +51,7 @@ export function ClientProofSection() {
           </div>
 
           <p className="mt-4 text-base text-muted-foreground md:text-lg">
-            These are actual income dashboards and messages from people we work with —
+            These are actual income dashboards and messages from people we work with 
             posted straight from their phones. This is what happens when the marketing
             actually works.
           </p>

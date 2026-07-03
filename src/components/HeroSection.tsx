@@ -58,7 +58,7 @@ export function HeroSection() {
               </span>
             </div>
 
-            {/* Headline — big, white, uppercase, heavy */}
+            {/* Headline big, white, uppercase, heavy */}
             <h1 className="font-heading text-[2.1rem] leading-[1.03] sm:text-5xl lg:text-6xl font-black uppercase text-white mb-7 max-w-[22rem] sm:max-w-xl lg:max-w-none mx-auto lg:mx-0">
               Turn Your Digital Product Into{" "}
               <span className="text-primary">True Family Freedom</span>

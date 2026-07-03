@@ -69,7 +69,7 @@ export function SiteFooter() {
         {/* Bottom row: copyright · nav */}
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-sm text-gray-600">
-            © {new Date().getFullYear()} Legacy Falcon Marketing, LLC — All Rights Reserved
+            © {new Date().getFullYear()} Legacy Falcon Marketing, LLC All Rights Reserved
           </p>
           <nav className="flex flex-wrap gap-x-6 gap-y-2">
             {bottomLinks.map((link) => (

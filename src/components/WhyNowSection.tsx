@@ -37,7 +37,7 @@ export function WhyNowSection() {
           </h2>
           
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            The economy is shifting fast. Course buyers are out there—but only if they see you.
+            The economy is shifting fast. Course buyers are out there but only if they see you.
           </p>
         </div>
 

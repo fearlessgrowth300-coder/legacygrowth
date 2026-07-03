@@ -60,7 +60,7 @@ export function FalconPlanSection() {
               <p>
                 The $100M Falcon Sales Plan was built to help beginners stop guessing and
                 start building a clear system that attracts the right people, warms them up,
-                and moves them toward buying — without sounding desperate.
+                and moves them toward buying without sounding desperate.
               </p>
             </div>
 

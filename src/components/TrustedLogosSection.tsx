@@ -13,7 +13,7 @@ import fiverrLogo from "@/assets/logos/fiverr.png";
 import googleLogo from "@/assets/logos/google.png";
 import paypalLogo from "@/assets/logos/paypal.png";
 import stripeLogo from "@/assets/logos/stripe.png";
-// NOTE: skool.png is 168KB — very large for a small logo. Should be replaced with an optimized version (< 20KB).
+// NOTE: skool.png is 168KB very large for a small logo. Should be replaced with an optimized version (< 20KB).
 import skoolLogo from "@/assets/logos/skool.png";
 import beaconsLogo from "@/assets/logos/beacons.png";
 

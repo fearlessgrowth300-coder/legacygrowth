@@ -54,7 +54,7 @@ export function PortfolioSection() {
             Stores That Were Built And Convert
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
-            Real Beacons stores I've built across every niche — designed to turn visitors
+            Real Beacons stores I've built across every niche designed to turn visitors
             into buyers. Watch a few of them below.
           </p>
         </div>

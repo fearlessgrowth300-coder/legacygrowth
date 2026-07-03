@@ -81,7 +81,7 @@ export function ContentStudioSection() {
   const handleWhatsAppClick = () => {
     window.open(
       getWhatsAppLink(
-        "Hi Harper, I'd love to see content created for my product — UGC and edited video content. Can you help?"
+        "Hi Harper, I'd love to see content created for my product UGC and edited video content. Can you help?"
       ),
       "_blank"
     );
@@ -101,7 +101,7 @@ export function ContentStudioSection() {
           </h2>
 
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            From UGC to fully edited video content — we make the kind of videos that stop the
+            From UGC to fully edited video content we make the kind of videos that stop the
             scroll, build trust, and turn viewers into buyers.
           </p>
         </div>

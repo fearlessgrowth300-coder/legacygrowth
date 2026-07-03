@@ -94,7 +94,7 @@ const Index = () => {
 
       <FalconPlanSection />
 
-      {/* Trusted-logos "2.7 Million Customers" section — removed for now, re-add later */}
+      {/* Trusted-logos "2.7 Million Customers" section removed for now, re-add later */}
       {/* <TrustedLogosSection /> */}
       <LiveSuccessCounter />
       <WhoIHelpSection />

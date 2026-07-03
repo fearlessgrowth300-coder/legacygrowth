@@ -37,7 +37,7 @@ export function TrustSystemSection() {
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
               Harper helps beginners set up the missing pieces: a clear offer, a
               trust-building profile, a simple funnel, content direction, and a DM flow
-              that feels natural — not pushy.
+              that feels natural not pushy.
             </p>
 
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">

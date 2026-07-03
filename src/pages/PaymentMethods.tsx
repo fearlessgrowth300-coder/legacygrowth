@@ -410,7 +410,7 @@ export default function PaymentMethods() {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-foreground">
-                You can send your payment safely using Remitly — it's the fastest and most reliable 
+                You can send your payment safely using Remitly it's the fastest and most reliable 
                 global payment app for our clients.
               </p>
               
@@ -442,7 +442,7 @@ export default function PaymentMethods() {
                   },
                   {
                     name: "Michael A.",
-                    text: "Remitly was super fast — sent my payment and got confirmation in less than 5 minutes. I now use this app for all my business transactions."
+                    text: "Remitly was super fast sent my payment and got confirmation in less than 5 minutes. I now use this app for all my business transactions."
                   },
                   {
                     name: "Toyin B.",
@@ -456,7 +456,7 @@ export default function PaymentMethods() {
                       ))}
                     </div>
                     <p className="text-muted-foreground text-sm italic">"{testimonial.text}"</p>
-                    <p className="text-luxury-gold text-xs mt-2">— {testimonial.name}</p>
+                    <p className="text-luxury-gold text-xs mt-2"> {testimonial.name}</p>
                   </div>
                 ))}
               </div>
