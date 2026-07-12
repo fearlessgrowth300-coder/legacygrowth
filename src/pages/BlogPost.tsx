@@ -9,6 +9,17 @@ const WHATSAPP_URL = "https://wa.me/13023295673";
 
 export const blogPosts = [
   {
+    slug: "how-much-does-a-sales-funnel-cost",
+    title: "How Much Does a Sales Funnel Cost in 2026? (Real Numbers)",
+    excerpt:
+      "A sales funnel costs anywhere from $0 to $10,000+ depending on who builds it: DIY runs $30–$300 per month in tools, freelancers charge $200–$2,000, agencies charge $5,000+, and done-for-you services like Legacy Falcon Marketing cost $97–$497 flat.",
+    category: "Pricing",
+    readTime: "7 min read",
+    date: "Jul 13, 2026",
+    dateISO: "2026-07-13",
+    featured: true,
+  },
+  {
     slug: "how-to-build-a-sales-funnel-for-digital-products",
     title: "How to Build a Sales Funnel for Your Digital Product (Step-by-Step Guide)",
     excerpt:
@@ -103,7 +114,11 @@ function ArticleFunnelGuide() {
         Falcon Marketing, depending on whether you need a basic setup or a
         complete system with automation. Freelance funnel builders on
         marketplaces typically charge $200–$2,000+, and agencies serving
-        high-ticket coaches charge $5,000 and up. If you'd rather not spend
+        high-ticket coaches charge $5,000 and up — see our full{" "}
+        <Link to="/blog/how-much-does-a-sales-funnel-cost" className="text-primary underline">
+          sales funnel cost breakdown
+        </Link>{" "}
+        for real numbers across every option. If you'd rather not spend
         weeks learning page builders, email tools, and checkout integrations,{" "}
         <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-primary underline">
           message us on WhatsApp
@@ -128,8 +143,110 @@ function ArticleFunnelGuide() {
   );
 }
 
+function ArticleFunnelCost() {
+  return (
+    <article className="prose prose-lg max-w-none">
+      {/* Answer-first block for AI Overviews / featured snippets */}
+      <p className="text-xl leading-relaxed font-medium border-l-4 border-primary pl-5 bg-primary/5 py-4 rounded-r-lg">
+        A sales funnel costs between $0 and $10,000+ in 2026, depending on who
+        builds it. Doing it yourself costs $30–$300 per month in software.
+        Hiring a freelance funnel builder costs $200–$2,000 per project.
+        Agencies serving high-ticket coaches charge $5,000 and up. A
+        done-for-you service like Legacy Falcon Marketing costs a flat $97–$497
+        including setup, design, and automation.
+      </p>
+
+      <h2 className="text-3xl font-bold mt-12 mb-4">What determines the cost of a sales funnel?</h2>
+      <p>
+        Four things drive the price: how many pages the funnel needs (a simple
+        landing-page-to-checkout funnel is far cheaper than a webinar funnel
+        with upsells), whether email or WhatsApp automation is included, who
+        does the copywriting, and who you hire. The platform itself is the
+        smallest cost — the expertise to make it convert is what you're really
+        paying for.
+      </p>
+
+      <h2 className="text-3xl font-bold mt-12 mb-4">How much does it cost to build a funnel yourself?</h2>
+      <p>
+        Expect $30–$300 per month in tools: a funnel or page builder
+        ($0–$97/month), an email platform ($0–$50/month at small list sizes),
+        and a checkout processor (usually free plus ~3% per sale). The real
+        cost is time — most first-timers spend 3–6 weeks building a funnel
+        that a professional would finish in days, and the first version
+        usually converts poorly until it's been tested and fixed. If you're
+        unsure what the pieces are, start with our{" "}
+        <Link to="/blog/how-to-build-a-sales-funnel-for-digital-products" className="text-primary underline">
+          step-by-step funnel building guide
+        </Link>
+        .
+      </p>
+
+      <h2 className="text-3xl font-bold mt-12 mb-4">How much do freelance funnel builders charge?</h2>
+      <p>
+        Freelancers on marketplaces like Fiverr and Upwork charge $200–$2,000
+        per funnel. At the low end you get page assembly with your copy and
+        assets; at the high end you get strategy, copywriting, and automation.
+        Quality varies enormously — always ask for live funnels they've built
+        and real conversion numbers before paying.
+      </p>
+
+      <h2 className="text-3xl font-bold mt-12 mb-4">How much do funnel agencies charge?</h2>
+      <p>
+        Agencies charge $5,000–$25,000+ per funnel, often with monthly
+        retainers on top. That price buys a team — strategist, copywriter,
+        designer, media buyer — and makes sense for businesses already doing
+        six figures. For a creator launching a $47 course, agency pricing
+        rarely pays for itself.
+      </p>
+
+      <h2 className="text-3xl font-bold mt-12 mb-4">What does a done-for-you funnel cost at Legacy Falcon Marketing?</h2>
+      <p>
+        $97 for a basic setup and up to $497 for a complete system with
+        automation — flat, one-time pricing with no retainer. That includes
+        the landing page, checkout, follow-up sequence, and 30 days of
+        WhatsApp support, with most builds live within 7 days. Pricing
+        questions are covered in our{" "}
+        <Link to="/#faq" className="text-primary underline">FAQ</Link>, or{" "}
+        <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-primary underline">
+          message us on WhatsApp
+        </a>{" "}
+        for a quote on your specific product.
+      </p>
+
+      <h2 className="text-3xl font-bold mt-12 mb-4">Hidden costs to watch out for</h2>
+      <ul className="list-disc pl-6 space-y-2">
+        <li><strong>Monthly platform lock-in:</strong> some builders put you on $297/month software you don't need.</li>
+        <li><strong>Revisions billed hourly:</strong> agree on a fixed number of revisions up front.</li>
+        <li><strong>Copywriting sold separately:</strong> a funnel without persuasive copy is just pretty pages — confirm it's included.</li>
+        <li><strong>No handover:</strong> make sure you own the accounts and can edit everything after delivery.</li>
+      </ul>
+
+      <h2 className="text-3xl font-bold mt-12 mb-4">Is a sales funnel worth the money?</h2>
+      <p>
+        Run your own numbers: a funnel that lifts conversion from 1% to 2.5%
+        more than doubles revenue from the same traffic. Our free{" "}
+        <Link to="/#roi-calculator" className="text-primary underline">
+          funnel ROI calculator
+        </Link>{" "}
+        shows exactly what that improvement is worth at your ad spend and
+        order value — for most digital products it pays back a $497 build
+        within the first month of consistent traffic.
+      </p>
+
+      <h2 className="text-3xl font-bold mt-12 mb-4">Quick recap</h2>
+      <ul className="list-disc pl-6 space-y-2">
+        <li>DIY: $30–$300/month in tools, plus weeks of your time.</li>
+        <li>Freelancer: $200–$2,000 per project, quality varies.</li>
+        <li>Agency: $5,000+, built for six-figure businesses.</li>
+        <li>Legacy Falcon done-for-you: $97–$497 flat, live in about 7 days.</li>
+      </ul>
+    </article>
+  );
+}
+
 const articleComponents: Record<string, () => JSX.Element> = {
   "how-to-build-a-sales-funnel-for-digital-products": ArticleFunnelGuide,
+  "how-much-does-a-sales-funnel-cost": ArticleFunnelCost,
 };
 
 export default function BlogPost() {
