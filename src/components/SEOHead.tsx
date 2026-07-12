@@ -67,7 +67,7 @@ export function SEOHead({
         "@type": "Organization",
         "@id": `${url}#organization`,
         "name": "Legacy Falcon Marketing",
-        "alternateName": ["Legacy Falcon", "Falcon Marketing", "Falcon"],
+        "alternateName": ["Legacy Falcons", "Legacy Falcon", "Falcon Marketing", "Falcon", "Legacy Falcons Marketing"],
         "url": url,
         "logo": `${url}favicon-512.png`,
         "image": image,
