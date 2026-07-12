@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -10,6 +9,10 @@ import { Shield } from "lucide-react";
 
 export function FAQSection() {
   const faqs = [
+    {
+      question: "What does a digital product marketing service include?",
+      answer: "A digital product marketing service builds everything you need to sell an online product: a conversion-optimized sales funnel, product positioning and messaging, landing pages, checkout setup, and a launch strategy. At Legacy Falcon Marketing this is done-for-you — you bring the product or course idea, and you receive a complete, ready-to-sell system."
+    },
     {
       question: "Do I need technical skills to work with you?",
       answer: "No technical skills required. I handle 100% of the technical setup including coding, design, and platform configuration. You'll receive a fully-functional, ready-to-use system with simple step-by-step instructions for managing your content. Perfect for non-tech-savvy marketers who want professional results."
@@ -31,8 +34,8 @@ export function FAQSection() {
       answer: "Perfect! I specialize in fixing and optimizing existing stores. I'll audit your current setup, identify what's not working, and implement proven strategies to get you sales. Many of my best success stories are from rescuing 'dead' stores."
     },
     {
-      question: "How much does it cost?",
-      answer: "My services range from $97 for basic setups to $497 for complete done-for-you systems with automation. The exact investment depends on what you need. Message me on WhatsApp for a personalized quote based on your situation."
+      question: "How much does a done-for-you sales funnel cost?",
+      answer: "A done-for-you sales funnel from Legacy Falcon Marketing costs between $97 for a basic setup and $497 for a complete system with automation. The exact investment depends on what you need. Message me on WhatsApp for a personalized quote based on your situation."
     },
     {
       question: "What support do I get after setup?",
@@ -44,40 +47,8 @@ export function FAQSection() {
     }
   ];
 
-  // Add FAQ Schema
-  useEffect(() => {
-    let existingScript = document.getElementById('faq-schema');
-    if (existingScript) {
-      existingScript.remove();
-    }
-
-    const faqSchema = {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": faqs.map(faq => ({
-        "@type": "Question",
-        "name": faq.question,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": faq.answer
-        }
-      }))
-    };
-
-    const script = document.createElement('script');
-    script.id = 'faq-schema';
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(faqSchema);
-    document.head.appendChild(script);
-
-    return () => {
-      const scriptToRemove = document.getElementById('faq-schema');
-      if (scriptToRemove) {
-        scriptToRemove.remove();
-      }
-    };
-  }, []);
-
+  // FAQPage JSON-LD lives statically in index.html so crawlers see it
+  // without executing JS — keep index.html in sync when editing faqs.
   return (
     <section id="faq" className="py-20 bg-muted">
       <div className="container mx-auto px-4">

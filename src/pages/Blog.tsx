@@ -6,69 +6,13 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Search, Calendar, Clock, ArrowRight, TrendingUp } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { blogPosts } from "./BlogPost";
 
 export default function Blog() {
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
 
-  const blogPosts = [
-    {
-      id: 1,
-      title: "10 Proven Strategies to Double Your Funnel Conversion Rate",
-      excerpt: "Learn the exact tactics that helped our clients achieve 150%+ conversion rate improvements in just 30 days.",
-      category: "Conversion Optimization",
-      readTime: "8 min read",
-      date: "Nov 10, 2025",
-      featured: true
-    },
-    {
-      id: 2,
-      title: "The Psychology Behind High-Converting Sales Pages",
-      excerpt: "Discover the cognitive triggers and design principles that make visitors take action and become customers.",
-      category: "Sales Psychology",
-      readTime: "6 min read",
-      date: "Nov 8, 2025",
-      featured: true
-    },
-    {
-      id: 3,
-      title: "Email Sequences That Generated $2M+ in Revenue",
-      excerpt: "A complete breakdown of the email automation strategies that drive consistent revenue for online businesses.",
-      category: "Email Marketing",
-      readTime: "10 min read",
-      date: "Nov 5, 2025",
-      featured: false
-    },
-    {
-      id: 4,
-      title: "How to Build a Sales Funnel That Runs on Autopilot",
-      excerpt: "Step-by-step guide to creating automated sales systems that work 24/7 without constant oversight.",
-      category: "Funnel Strategy",
-      readTime: "12 min read",
-      date: "Nov 1, 2025",
-      featured: false
-    },
-    {
-      id: 5,
-      title: "Landing Page Optimization: Before & After Case Study",
-      excerpt: "Real examples of landing page transformations that increased conversions by 300%+.",
-      category: "Case Studies",
-      readTime: "7 min read",
-      date: "Oct 28, 2025",
-      featured: false
-    },
-    {
-      id: 6,
-      title: "The Ultimate Guide to A/B Testing Your Sales Funnel",
-      excerpt: "Learn how to run profitable split tests and make data-driven decisions that boost revenue.",
-      category: "Testing & Analytics",
-      readTime: "9 min read",
-      date: "Oct 25, 2025",
-      featured: false
-    }
-  ];
-
-  const categories = ["All", "Conversion Optimization", "Sales Psychology", "Email Marketing", "Funnel Strategy", "Case Studies", "Testing & Analytics"];
+  const categories = ["All", ...Array.from(new Set(blogPosts.map((p) => p.category)))];
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   const filteredPosts = blogPosts.filter(post => {
@@ -141,10 +85,10 @@ export default function Blog() {
           
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {filteredPosts.filter(post => post.featured).map((post) => (
-              <Card 
-                key={post.id}
+              <Card
+                key={post.slug}
                 className="overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer group border-2 hover:border-primary/50"
-                onClick={() => navigate(`/blog/${post.id}`)}
+                onClick={() => navigate(`/blog/${post.slug}`)}
               >
                 <div className="h-48 bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
                   <TrendingUp className="h-16 w-16 text-primary opacity-50" />
@@ -184,10 +128,10 @@ export default function Blog() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredPosts.filter(post => !post.featured).map((post) => (
-              <Card 
-                key={post.id}
+              <Card
+                key={post.slug}
                 className="overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer group hover:border-primary/50"
-                onClick={() => navigate(`/blog/${post.id}`)}
+                onClick={() => navigate(`/blog/${post.slug}`)}
               >
                 <div className="h-32 bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center">
                   <TrendingUp className="h-12 w-12 text-primary opacity-30" />

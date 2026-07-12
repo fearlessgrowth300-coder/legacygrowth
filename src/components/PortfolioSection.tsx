@@ -124,7 +124,7 @@ export function PortfolioSection() {
             {selectedTemplate && (
               <img
                 src={selectedTemplate}
-                alt="Full store view"
+                alt={templates.find((t) => t.src === selectedTemplate)?.alt ?? "Full store view"}
                 className="w-full h-auto"
                 loading="eager"
                 decoding="async"

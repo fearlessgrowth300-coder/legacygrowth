@@ -1,11 +1,11 @@
 import { Instagram, Twitter, Youtube } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const policyLinks = [
   "Privacy Policy",
   "Terms & Conditions",
   "Disclaimer",
   "Refund Policy",
-  "FAQ",
 ];
 
 const bottomLinks = [
@@ -13,6 +13,13 @@ const bottomLinks = [
   { label: "Results", href: "#results" },
   { label: "Pricing", href: "#pricing" },
   { label: "Reviews", href: "#testimonials" },
+  { label: "ROI Calculator", href: "#roi-calculator" },
+  { label: "FAQ", href: "#faq" },
+];
+
+const routeLinks = [
+  { label: "Funnel Guides", to: "/blog" },
+  { label: "Payment Methods", to: "/payment-methods" },
 ];
 
 function scrollTo(e: React.MouseEvent<HTMLAnchorElement>, href: string) {
@@ -81,6 +88,15 @@ export function SiteFooter() {
               >
                 {link.label}
               </a>
+            ))}
+            {routeLinks.map((link) => (
+              <Link
+                key={link.label}
+                to={link.to}
+                className="text-sm font-medium text-black underline hover:text-primary transition-colors"
+              >
+                {link.label}
+              </Link>
             ))}
           </nav>
         </div>

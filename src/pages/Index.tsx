@@ -39,6 +39,8 @@ const ExitIntentModal = lazy(() => import("@/components/ExitIntentModal").then(m
 const QuizModal = lazy(() => import("@/components/QuizModal").then(m => ({ default: m.QuizModal })));
 const ContactFormModal = lazy(() => import("@/components/ContactFormModal").then(m => ({ default: m.ContactFormModal })));
 const HolidayOfferCard = lazy(() => import("@/components/HolidayOfferCard").then(m => ({ default: m.HolidayOfferCard })));
+const ROICalculator = lazy(() => import("@/components/ROICalculator").then(m => ({ default: m.ROICalculator })));
+const FAQSection = lazy(() => import("@/components/FAQSection").then(m => ({ default: m.FAQSection })));
 
 function SectionSkeleton({ height = "min-h-[400px]" }: { height?: string }) {
   return (
@@ -147,6 +149,18 @@ const Index = () => {
       <LazySection fallbackHeight="min-h-[300px]">
         <Suspense fallback={<SectionSkeleton height="min-h-[300px]" />}>
           <CertificationBadges />
+        </Suspense>
+      </LazySection>
+
+      <LazySection fallbackHeight="min-h-[600px]">
+        <Suspense fallback={<SectionSkeleton height="min-h-[600px]" />}>
+          <ROICalculator />
+        </Suspense>
+      </LazySection>
+
+      <LazySection fallbackHeight="min-h-[600px]">
+        <Suspense fallback={<SectionSkeleton height="min-h-[600px]" />}>
+          <FAQSection />
         </Suspense>
       </LazySection>
 
