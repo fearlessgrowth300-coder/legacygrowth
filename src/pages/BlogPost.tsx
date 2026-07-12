@@ -147,7 +147,7 @@ export default function BlogPost() {
       <SEOHead
         title={`${post.title} | Legacy Falcon Marketing`}
         description={post.excerpt}
-        url={`https://legacygrowth.site/blog/${post.slug}`}
+        url={`https://legacyfalcons.com/blog/${post.slug}`}
         schema="article"
         articleData={{
           headline: post.title,

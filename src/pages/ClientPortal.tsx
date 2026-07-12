@@ -129,7 +129,7 @@ export default function ClientPortal() {
             <div className="mt-6 text-center">
               <p className="text-sm text-muted-foreground">
                 Need help accessing your account?{" "}
-                <a href="mailto:harper@legacygrowth.site" className="text-primary hover:underline">
+                <a href="mailto:harper@legacyfalcons.com" className="text-primary hover:underline">
                   Contact Support
                 </a>
               </p>

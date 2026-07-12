@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://legacygrowth.site/sitemap.xml
+Sitemap: https://legacyfalcons.com/sitemap.xml

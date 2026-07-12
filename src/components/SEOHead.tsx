@@ -16,7 +16,7 @@ interface SEOHeadProps {
   };
 }
 
-const DEFAULT_URL = "https://legacygrowth.site/";
+const DEFAULT_URL = "https://legacyfalcons.com/";
 const DEFAULT_IMAGE = `${DEFAULT_URL}legacy-falcon-logo-og.jpg`;
 
 function setMeta(selector: string, content: string) {
