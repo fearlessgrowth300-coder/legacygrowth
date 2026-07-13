@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, ArrowLeft, MessageCircle } from "lucide-react";
 import NotFound from "./NotFound";
 
-const WHATSAPP_URL = "https://wa.me/18029097468";
+const WHATSAPP_URL = "https://wa.me/16615518269";
 
 export const blogPosts = [
   {

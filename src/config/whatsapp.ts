@@ -1,5 +1,5 @@
 // Centralized WhatsApp configuration
-export const WHATSAPP_NUMBER = "18029097468";
+export const WHATSAPP_NUMBER = "16615518269";
 
 export const getWhatsAppLink = (message?: string) => {
   const encodedMessage = message ? encodeURIComponent(message) : "";

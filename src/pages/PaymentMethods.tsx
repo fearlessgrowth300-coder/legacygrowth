@@ -420,7 +420,7 @@ export default function PaymentMethods() {
                   <li>If you have the app, open it and send to our account (shared on WhatsApp)</li>
                   <li>If you don't have it, download Remitly (takes 2 minutes)</li>
                   <li>Send your payment using the app</li>
-                  <li>Screenshot the confirmation and send to WhatsApp: +1 802-909-7468</li>
+                  <li>Screenshot the confirmation and send to WhatsApp: +1 661-551-8269</li>
                 </ol>
               </div>
 
@@ -600,7 +600,7 @@ export default function PaymentMethods() {
                 <h3 className="text-white font-semibold mb-2">What if I don't get a confirmation email?</h3>
                 <p className="text-white/80 text-sm">
                   Check your spam folder first. If still nothing, contact us via WhatsApp at 
-                  +1 802-909-7468 with your payment details.
+                  +1 661-551-8269 with your payment details.
                 </p>
               </div>
               <div>
