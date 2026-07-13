@@ -76,11 +76,11 @@ export function SEOHead({
         "contactPoint": {
           "@type": "ContactPoint",
           "contactType": "sales",
-          "telephone": "+1-302-329-5673",
+          "telephone": "+1-802-909-7468",
           "availableLanguage": "English"
         },
         "sameAs": [
-          "https://wa.me/13023295673"
+          "https://wa.me/18029097468"
         ]
       },
       {

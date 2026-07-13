@@ -117,7 +117,7 @@ export function FinalCTASection() {
                 <div className="text-center text-white">
                   <MessageCircle className="h-6 w-6 mx-auto mb-2 text-green-300" />
                   <p className="font-medium">WhatsApp</p>
-                  <p className="text-sm opacity-90">+1 302-329-5673</p>
+                  <p className="text-sm opacity-90">+1 802-909-7468</p>
                 </div>
               </Card>
               
