@@ -39,7 +39,7 @@ export function SiteFooter() {
         {/* Top row: logo · policy links · socials */}
         <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
           <a href="#top" onClick={(e) => scrollTo(e, "#top")} className="flex items-center gap-2 flex-shrink-0">
-            <img src="/falcon-mark.png" alt="Legacy Falcon" className="h-8 w-auto" />
+            <img src="/falcon-mark.png" alt="Legacy Falcon Marketing logo - gold falcon emblem" className="h-8 w-auto" />
             <span className="font-heading text-lg font-black text-black">
               LEGACY<span className="text-gray-400 font-extrabold">FALCON</span>
             </span>

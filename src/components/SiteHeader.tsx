@@ -44,7 +44,7 @@ export function SiteHeader() {
             onClick={(e) => handleNav(e, "#top")}
             className="flex items-center gap-2 flex-shrink-0"
           >
-            <img src="/falcon-mark.png" alt="Legacy Falcon" className="h-9 w-auto" />
+            <img src="/falcon-mark.png" alt="Legacy Falcon Marketing logo - gold falcon emblem" className="h-9 w-auto" />
             <span className="font-heading text-xl font-black tracking-tight text-black">
               LEGACY<span className="text-gray-400 font-extrabold">FALCON</span>
             </span>
