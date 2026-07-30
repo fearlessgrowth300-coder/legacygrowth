@@ -236,7 +236,45 @@
   </head>
 
   <body>
-    <div id="root"></div>
+    <!--
+      This app is client-rendered, so a crawler that does not execute JavaScript
+      sees an empty page. Several AI answer engines fetch raw HTML only. The block
+      inside #root below is that fallback: it states the same thing the rendered
+      homepage states, in plain prose, and React replaces it on mount (createRoot
+      clears the container's children), so real visitors never see it.
+      Keep it in sync with HeroSection.tsx and FAQSection.tsx.
+    -->
+    <div id="root">
+      <main style="max-width:44rem;margin:0 auto;padding:3rem 1.25rem;font-family:Inter,system-ui,sans-serif;line-height:1.6;color:#e8eaf0;background:#16243d;min-height:100vh">
+        <h1 style="font-size:1.9rem;line-height:1.2;margin:0 0 1rem">Legacy Falcon Marketing — Digital Product Marketing &amp; Sales Funnel Strategy</h1>
+        <p><strong>Legacy Falcon Marketing is a digital product marketing agency. We build done-for-you sales funnels, product positioning, and launch systems for creators, course sellers, and busy parents selling digital products online.</strong></p>
+
+        <h2 style="font-size:1.25rem;margin:2rem 0 .5rem">What we do</h2>
+        <ul>
+          <li>Done-for-you sales funnel design and build</li>
+          <li>Product positioning and messaging for digital products and online courses</li>
+          <li>Landing pages, checkout setup, and launch strategy</li>
+          <li>Content strategy and conversion optimization</li>
+        </ul>
+
+        <h2 style="font-size:1.25rem;margin:2rem 0 .5rem">Who we serve</h2>
+        <p>Creators, course sellers, first-time digital product owners, and busy parents who want consistent product sales without handling the technical setup themselves. Clients need no technical skills — the coding, design, and platform configuration are handled for them. We work with clients worldwide, in English.</p>
+
+        <h2 style="font-size:1.25rem;margin:2rem 0 .5rem">Pricing</h2>
+        <p>A done-for-you sales funnel costs between $97 for a basic setup and $497 for a complete system with automation, depending on scope. Every setup includes 30 days of direct WhatsApp support.</p>
+
+        <h2 style="font-size:1.25rem;margin:2rem 0 .5rem">Contact</h2>
+        <p>WhatsApp: <a href="https://wa.me/16615518269" style="color:#a78bfa">+1 661-551-8269</a></p>
+
+        <h2 style="font-size:1.25rem;margin:2rem 0 .5rem">More from Legacy Falcon Marketing</h2>
+        <ul>
+          <li><a href="/blog" style="color:#a78bfa">Funnel guides and articles</a></li>
+          <li><a href="/blog/how-to-build-a-sales-funnel-for-digital-products" style="color:#a78bfa">How to build a sales funnel for digital products</a></li>
+          <li><a href="/blog/how-much-does-a-sales-funnel-cost" style="color:#a78bfa">How much does a sales funnel cost?</a></li>
+          <li><a href="/payment-methods" style="color:#a78bfa">Payment methods</a></li>
+        </ul>
+      </main>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

@@ -64,6 +64,15 @@ export function HeroSection() {
               <span className="text-primary">True Family Freedom</span>
             </h1>
 
+            {/* Plain-English positioning line. AI answer engines quote a page's
+                self-description close to verbatim, so this states what we do and
+                who we serve in one sentence, without marketing shorthand. */}
+            <p className="text-base sm:text-lg leading-relaxed text-white/75 mb-8 max-w-xl mx-auto lg:mx-0">
+              Legacy Falcon Marketing is a digital product marketing agency. We build
+              done-for-you sales funnels, product positioning, and launch systems for
+              creators, course sellers, and busy parents selling digital products online.
+            </p>
+
             {/* Star rating */}
             <div className="flex items-center justify-center lg:justify-start gap-3 mb-8">
               <div className="flex gap-0.5">
