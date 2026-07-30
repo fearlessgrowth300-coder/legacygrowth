@@ -71,7 +71,6 @@ function ReviewCard({ review }: { review: Review }) {
 }
 
 function MarqueeRow({ items, direction }: { items: Review[]; direction: "left" | "right" }) {
-  const doubled = [...items, ...items];
   return (
     <div className="group flex overflow-hidden">
       <div
@@ -79,9 +78,16 @@ function MarqueeRow({ items, direction }: { items: Review[]; direction: "left" |
           direction === "left" ? "animate-marquee-left" : "animate-marquee-right"
         } group-hover:[animation-play-state:paused]`}
       >
-        {doubled.map((review, i) => (
+        {items.map((review, i) => (
           <ReviewCard key={`${review.name}-${i}`} review={review} />
         ))}
+        {/* Duplicate pass exists only to make the scroll loop seamless. It is hidden from
+            screen readers and crawlers so the same person is never counted as two reviews. */}
+        <div className="flex" aria-hidden="true">
+          {items.map((review, i) => (
+            <ReviewCard key={`${review.name}-dup-${i}`} review={review} />
+          ))}
+        </div>
       </div>
     </div>
   );
