@@ -27,8 +27,10 @@ function setMeta(selector: string, content: string) {
 }
 
 export function SEOHead({
-  title = "Legacy Falcon Marketing | Digital Product Marketing & Sales Funnel Strategy",
-  description = "Legacy Falcon Marketing helps creators, busy moms, and product owners turn digital products and courses into consistent sales with fast, strategic marketing systems, sales funnels, content strategy, and conversion-focused launch support.",
+  // Keep in sync with index.html. Bing flags titles over ~65 chars and
+  // descriptions outside ~120-160; these sit at 60 and 144.
+  title = "Legacy Falcon Marketing | Sales Funnels for Digital Products",
+  description = "We build done-for-you sales funnels for creators and course sellers: positioning, landing pages, checkout, and launch strategy. Setups from $97.",
   keywords = "Legacy Falcon Marketing, digital product marketing, sales funnel strategy, course marketing, digital product sales, marketing for creators, marketing for busy moms, content strategy, conversion optimization, online course sales, family freedom marketing, digital product launch support",
   image = DEFAULT_IMAGE,
   url = DEFAULT_URL,
