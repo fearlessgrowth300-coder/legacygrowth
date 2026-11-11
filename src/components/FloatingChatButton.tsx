@@ -8,7 +8,7 @@ export function FloatingChatButton({ onClick }: FloatingChatButtonProps) {
   return (
     <button
       onClick={onClick}
-      aria-label="Have a question? Chat with Harper"
+      aria-label="Have a question? Chat with Adebayo"
       className="fixed bottom-5 left-5 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-primary text-primary-foreground shadow-lg hover:scale-110 transition-transform"
     >
       <MessageCircle className="w-6 h-6" />

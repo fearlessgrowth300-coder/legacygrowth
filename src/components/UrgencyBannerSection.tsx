@@ -29,7 +29,7 @@ export function UrgencyBannerSection() {
 
   const handleWhatsAppClick = () => {
     const currentMonth = getCurrentMonth();
-    window.open(getWhatsAppLink(`Hey Harper, I saw there are only 3 spots left for ${currentMonth} setup! I don't want to miss out. Can we get my store ready to sell in 72 hours?`), '_blank');
+    window.open(getWhatsAppLink(`Hey Adebayo, I saw there are only 3 spots left for ${currentMonth} setup! I don't want to miss out. Can we get my store ready to sell in 72 hours?`), '_blank');
   };
 
   return (

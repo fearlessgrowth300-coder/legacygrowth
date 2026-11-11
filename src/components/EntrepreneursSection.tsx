@@ -15,7 +15,7 @@ const reviews: Review[] = [
     name: "Bianca",
     avatarImg: "/testimonials/member1-avatar.jpg",
     proofImg: "/testimonials/member1-proof.jpg",
-    text: "$34.5k in a single day 😭 Started in 2024 with barely 4k followers, now I'm having consistent 6-figure months. Forever grateful to Harper and the Falcon team 🤎",
+    text: "$34.5k in a single day 😭 Started in 2024 with barely 4k followers, now I'm having consistent 6-figure months. Forever grateful to Adebayo and the Falcon team 🤎",
   },
   {
     name: "Sharon R",
@@ -124,7 +124,7 @@ export function EntrepreneursSection() {
             size="xl"
             onClick={() =>
               window.open(
-                getWhatsAppLink("Hi Harper! I'd love to discover the strategy."),
+                getWhatsAppLink("Hi Adebayo! I'd love to discover the strategy."),
                 "_blank"
               )
             }

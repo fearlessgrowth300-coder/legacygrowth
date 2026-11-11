@@ -16,7 +16,6 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { EntrepreneursSection } from "@/components/EntrepreneursSection";
 import { TrustSystemSection } from "@/components/TrustSystemSection";
 import { FalconPlanSection } from "@/components/FalconPlanSection";
-import { ClientProofSection } from "@/components/ClientProofSection";
 import { useExitIntent } from "@/hooks/useExitIntent";
 import { useHolidayTheme } from "@/hooks/useHolidayTheme";
 import { HolidayBanner } from "@/components/HolidayBanner";
@@ -81,9 +80,6 @@ const Index = () => {
       <HeroSection />
       <EntrepreneursSection />
 
-      <LazySection fallbackHeight="min-h-[600px]">
-        <ClientProofSection />
-      </LazySection>
 
       <BrandPillarsSection />
       <TrustSystemSection />

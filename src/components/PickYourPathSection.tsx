@@ -9,7 +9,7 @@ const paths = [
     title: "I just bought the course and feel lost",
     description: "Perfect! Let's get you set up properly from day one.",
     whatsappMessage:
-      "Hey Harper, I just bought the course and feel completely lost. I really need help getting set up properly. What's next?",
+      "Hey Adebayo, I just bought the course and feel completely lost. I really need help getting set up properly. What's next?",
     highlight: false,
   },
   {
@@ -18,7 +18,7 @@ const paths = [
     title: "I set up my store but have no sales",
     description: "Time to optimize and get those conversions flowing.",
     whatsappMessage:
-      "Hey Harper, I've set up my store but I'm not getting any sales. I need help with optimization and conversions. Can you help?",
+      "Hey Adebayo, I've set up my store but I'm not getting any sales. I need help with optimization and conversions. Can you help?",
     highlight: true,
   },
   {
@@ -27,7 +27,7 @@ const paths = [
     title: "I want to scale and automate",
     description: "Let's build systems that work while you sleep.",
     whatsappMessage:
-      "Hey Harper, I'm ready to scale my business and want to set up automation systems. Let's talk about taking this to the next level!",
+      "Hey Adebayo, I'm ready to scale my business and want to set up automation systems. Let's talk about taking this to the next level!",
     highlight: false,
   },
 ];

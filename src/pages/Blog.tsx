@@ -46,7 +46,7 @@ export default function Blog() {
               Learn How to Build High-Converting <span className="text-primary">Sales Funnels</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8">
-              Free expert guides on funnel optimization, conversion strategies, and proven tactics that helped 100+ digital marketers increase their sales. Written by Harper Harvey, digital marketing sales consultant.
+              Free expert guides on funnel optimization, conversion strategies, and proven tactics that helped 100+ digital marketers increase their sales. Written by Adebayo, founder of Legacy Falcon Marketing.
             </p>
 
             {/* Search */}

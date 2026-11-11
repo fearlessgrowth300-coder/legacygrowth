@@ -7,7 +7,7 @@ export function StickyMobileCTA() {
   const [isVisible, setIsVisible] = useState(true);
 
   const handleWhatsAppClick = () => {
-    window.open(getWhatsAppLink("Hi Harper! I'm interested in your digital business setup. Can we discuss how you can help me start earning online?"), "_blank");
+    window.open(getWhatsAppLink("Hi Adebayo! I'm interested in your digital business setup. Can we discuss how you can help me start earning online?"), "_blank");
   };
 
   const handleCalendarClick = () => {

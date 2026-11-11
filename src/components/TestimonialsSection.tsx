@@ -18,13 +18,13 @@ export function TestimonialsSection() {
       image: stellaTestimonial,
       name: "Stella Matins",
       highlight: "4 Sales in Two Weeks 💪",
-      preview: "When I joined Digital Wealth Academy, I made a decision to believe in myself and take action. What Harper built for me wasn't just a website it was a real business system. The funnel does the talking, and the marketing drives traffic daily. I've made sales even while sleeping..."
+      preview: "When I joined Digital Wealth Academy, I made a decision to believe in myself and take action. What Adebayo built for me wasn't just a website it was a real business system. The funnel does the talking, and the marketing drives traffic daily. I've made sales even while sleeping..."
     },
     {
       image: sodiTestimonial,
       name: "Sodi Gold",
       highlight: "Stay-At-Home Mom Turned Digital Earner",
-      preview: "I joined Harper's mentorship with no tech skills at all. Today, I'm running my own digital store, making weekly sales and even teaching others how to start. Harper made everything simple and gave me the confidence I never had before..."
+      preview: "I joined Adebayo's mentorship with no tech skills at all. Today, I'm running my own digital store, making weekly sales and even teaching others how to start. Adebayo made everything simple and gave me the confidence I never had before..."
     },
     {
       image: florenceTestimonial,

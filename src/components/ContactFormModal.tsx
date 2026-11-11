@@ -23,7 +23,7 @@ export function ContactFormModal({ isOpen, onClose }: ContactFormModalProps) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    const message = `Hi Harper! 
+    const message = `Hi Adebayo! 
     
 Name: ${formData.name}
 

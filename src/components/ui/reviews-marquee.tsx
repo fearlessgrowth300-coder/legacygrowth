@@ -11,27 +11,27 @@ const reviews: Review[] = [
   {
     name: "Stella Matins",
     headline: "4 Sales in Two Weeks",
-    text: "What Harper built for me wasn't just a website it was a real business system. The funnel does the talking, and the marketing drives traffic daily. I've made sales even while sleeping!",
+    text: "What Adebayo built for me wasn't just a website it was a real business system. The funnel does the talking, and the marketing drives traffic daily. I've made sales even while sleeping!",
   },
   {
     name: "Sodi Gold",
     headline: "Stay-At-Home Mom Turned Earner",
-    text: "I joined with no tech skills at all. Today I'm running my own digital store, making weekly sales and even teaching others how to start. Harper made everything simple.",
+    text: "I joined with no tech skills at all. Today I'm running my own digital store, making weekly sales and even teaching others how to start. Adebayo made everything simple.",
   },
   {
     name: "Florence Lillin",
     headline: "Over $7,000 Every Week",
-    text: "For months I didn't make a single sale. But I kept going, and Harper's system finally clicked. Now I'm earning over $7,000 every week. Best decision I ever made.",
+    text: "For months I didn't make a single sale. But I kept going, and Adebayo's system finally clicked. Now I'm earning over $7,000 every week. Best decision I ever made.",
   },
   {
     name: "Rose Mandesna",
     headline: "$100,000 in Just 70 Days",
-    text: "As a CNA making just $500 a week, I decided to use one check to pay for the class. That decision changed my life forever. Harper's system works if you work it.",
+    text: "As a CNA making just $500 a week, I decided to use one check to pay for the class. That decision changed my life forever. Adebayo's system works if you work it.",
   },
   {
     name: "Angela Maria",
     headline: "23 Sales in 7 Days",
-    text: "A few weeks ago I was ready to walk away. Then Harper set everything up and the results were immediate. 23 sales in just one week. A complete turnaround.",
+    text: "A few weeks ago I was ready to walk away. Then Adebayo set everything up and the results were immediate. 23 sales in just one week. A complete turnaround.",
   },
   {
     name: "Anne St",
@@ -41,7 +41,7 @@ const reviews: Review[] = [
   {
     name: "Lyndsey Hamer",
     headline: "Goal Achieved This Month",
-    text: "After struggling to get sales, I achieved my goal this month with the amazing setup Harper built. Everything just works when you have the right foundation.",
+    text: "After struggling to get sales, I achieved my goal this month with the amazing setup Adebayo built. Everything just works when you have the right foundation.",
   },
   {
     name: "Marcus Bell",

@@ -60,7 +60,7 @@ export default function PaymentMethods() {
   };
 
   const handleWhatsAppClick = () => {
-    window.open(getWhatsAppLink(`Hi team Harper! I just paid via bank transfer. Here's my name + email + package: ${formData.full_name}, ${formData.email}, ${customAmount || selectedAmount}`), "_blank");
+    window.open(getWhatsAppLink(`Hi team Adebayo! I just paid via bank transfer. Here's my name + email + package: ${formData.full_name}, ${formData.email}, ${customAmount || selectedAmount}`), "_blank");
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {

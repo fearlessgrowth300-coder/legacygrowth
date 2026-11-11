@@ -220,7 +220,7 @@ export function QuizModal({ isOpen, onClose }: QuizModalProps) {
               </div>
               <Button
                 onClick={() => {
-                  const message = `Hi Harper! I just completed your quiz and got: ${result.level}
+                  const message = `Hi Adebayo! I just completed your quiz and got: ${result.level}
 
 My responses:
 ${answers.map(a => `• ${a.question}: ${a.answer}`).join('\n')}
@@ -234,7 +234,7 @@ Contact: ${leadData.email} | ${leadData.whatsapp}`;
                 }}
                 className="w-full bg-luxury-gold text-luxury-black hover:bg-luxury-gold/90 font-semibold py-3"
               >
-                {result.cta} - WhatsApp Harper Now →
+                {result.cta} - WhatsApp Adebayo Now →
               </Button>
               <p className="text-xs text-white/70 text-center">
                 Get your personalized strategy session and start implementing immediately

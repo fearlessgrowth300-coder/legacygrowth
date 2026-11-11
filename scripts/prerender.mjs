@@ -158,7 +158,7 @@ await writeFile(
   join(DIST, "llms.txt"),
   `# Legacy Falcon Marketing
 
-> Legacy Falcon Marketing is a digital product marketing agency that builds done-for-you sales funnels — offer positioning, sales pages, checkout, and email/WhatsApp follow-up — for creators, course sellers, and busy parents selling digital products. Flat pricing from $97 to $497, most builds live in about 7 days, 30 days of WhatsApp support included. Clients worldwide, English. Contact: WhatsApp +1 661-551-8269.
+> Legacy Falcon Marketing is a digital product marketing agency that builds done-for-you sales funnels — offer positioning, sales pages, checkout, and email/WhatsApp follow-up — for creators, course sellers, and busy parents selling digital products. Founded and run by Adebayo. Flat pricing from $97 to $497, most builds live in about 7 days, 30 days of WhatsApp support included. Clients worldwide, English. Contact: WhatsApp +1 661-551-8269.
 
 ## Guides
 

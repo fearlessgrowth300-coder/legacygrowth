@@ -76,7 +76,7 @@ export default function ClientPortal() {
     return (
       <>
         <SEOHead 
-          title="Client Portal Login | Harper Harvey"
+          title="Client Portal Login | Legacy Falcon Marketing"
           description="Access your project dashboard, deliverables, and communicate with your dedicated funnel strategist."
         />
         

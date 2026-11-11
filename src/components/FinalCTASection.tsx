@@ -134,7 +134,7 @@ export function FinalCTASection() {
             <div className="mt-12">
               <Card className="p-6 bg-white/5 border-white/10 backdrop-blur-sm">
                 <p className="text-white text-lg font-medium">
-                  💼 <strong>Harper Harvey</strong> | Digital Success Expert
+                  💼 <strong>Adebayo</strong> | Digital Success Expert
                 </p>
                 <p className="text-white/80 mt-2">
                   Helping everyday people turn digital skills into passive income

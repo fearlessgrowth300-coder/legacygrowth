@@ -48,7 +48,7 @@ export function ThreeStagePromiseSection() {
   const handleWhatsAppClick = () => {
     window.open(
       getWhatsAppLink(
-        "Hey Harper, I love your 3-Stage Promise system! I'm ready to go through all three phases and build a real business. Let's start with Phase 1!"
+        "Hey Adebayo, I love your 3-Stage Promise system! I'm ready to go through all three phases and build a real business. Let's start with Phase 1!"
       ),
       "_blank"
     );
@@ -64,7 +64,7 @@ export function ThreeStagePromiseSection() {
               ✨ Proven Framework
             </span>
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-black uppercase text-white leading-tight">
-              Harper's 3-Stage Promise
+              Adebayo's 3-Stage Promise
             </h2>
           </div>
           <p className="text-white/70 text-lg leading-relaxed lg:pt-2">
@@ -111,7 +111,7 @@ export function ThreeStagePromiseSection() {
           </h3>
           <p className="text-white/70 mb-6 max-w-2xl mx-auto">
             Most people try to figure this out alone and get stuck in Phase 1 forever. With
-            Harper's guidance, you'll move through all 3 phases systematically.
+            Adebayo's guidance, you'll move through all 3 phases systematically.
           </p>
           <Button
             size="xl"

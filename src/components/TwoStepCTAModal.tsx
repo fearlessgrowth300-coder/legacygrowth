@@ -82,7 +82,7 @@ export function TwoStepCTAModal({ isOpen, onClose, ctaType }: TwoStepCTAModalPro
     console.log('Lead captured:', leadData);
 
     // Open WhatsApp
-    window.open(getWhatsAppLink(`Hi Harper! I'm ${contactData.name}. 
+    window.open(getWhatsAppLink(`Hi Adebayo! I'm ${contactData.name}. 
 
 My biggest challenge: ${roadblockAnswer}
 

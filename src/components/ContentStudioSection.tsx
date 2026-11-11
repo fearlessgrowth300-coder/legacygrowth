@@ -81,7 +81,7 @@ export function ContentStudioSection() {
   const handleWhatsAppClick = () => {
     window.open(
       getWhatsAppLink(
-        "Hi Harper, I'd love to see content created for my product UGC and edited video content. Can you help?"
+        "Hi Adebayo, I'd love to see content created for my product UGC and edited video content. Can you help?"
       ),
       "_blank"
     );

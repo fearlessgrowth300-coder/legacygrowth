@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Card } from "@/components/ui/card";
-import { Users, DollarSign, Zap, Target } from "lucide-react";
+import { Users, Zap, Target } from "lucide-react";
 
 interface CounterProps {
   end: number;
@@ -67,7 +67,6 @@ export function LiveSuccessCounter() {
 
   const stats = [
     { icon: Users, label: "Success Stories", value: 147, suffix: "+", color: "text-blue-500" },
-    { icon: DollarSign, label: "Client Revenue Generated", value: 12500000, prefix: "$", suffix: "+", color: "text-green-500", format: "compact" as const },
     { icon: Zap, label: "Funnels Built", value: 289, suffix: "+", color: "text-purple-500" },
     { icon: Target, label: "Average ROI Increase", value: 247, suffix: "%", color: "text-orange-500" },
   ];
@@ -84,7 +83,7 @@ export function LiveSuccessCounter() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {stats.map((stat, index) => {
             const Icon = stat.icon;
             return (
@@ -101,9 +100,9 @@ export function LiveSuccessCounter() {
                 {/* Fixed height container for counter to prevent CLS */}
                 <div className="mb-2 min-w-0 truncate bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-4xl font-bold text-transparent md:text-5xl" style={{ minHeight: '3.5rem' }}>
                   {isInView ? (
-                    <AnimatedCounter end={stat.value} prefix={stat.prefix} suffix={stat.suffix} format={stat.format} />
+                    <AnimatedCounter end={stat.value} suffix={stat.suffix} />
                   ) : (
-                    <span>{stat.prefix}{formatCounterValue(0, stat.format)}{stat.suffix}</span>
+                    <span>{formatCounterValue(0)}{stat.suffix}</span>
                   )}
                 </div>
                 <p className="text-sm text-muted-foreground font-medium">{stat.label}</p>

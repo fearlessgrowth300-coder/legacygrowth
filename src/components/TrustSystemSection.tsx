@@ -35,7 +35,7 @@ export function TrustSystemSection() {
             </p>
 
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              Harper helps beginners set up the missing pieces: a clear offer, a
+              Adebayo helps beginners set up the missing pieces: a clear offer, a
               trust-building profile, a simple funnel, content direction, and a DM flow
               that feels natural not pushy.
             </p>
@@ -49,13 +49,13 @@ export function TrustSystemSection() {
               size="xl"
               onClick={() =>
                 window.open(
-                  getWhatsAppLink("Hi Harper! I'm ready to start my setup."),
+                  getWhatsAppLink("Hi Adebayo! I'm ready to start my setup."),
                   "_blank"
                 )
               }
               className="w-full rounded-full font-heading font-extrabold uppercase tracking-wide text-base py-6 bg-primary text-primary-foreground hover:bg-primary/90 shadow-gold"
             >
-              Start My Setup With Harper
+              Start My Setup With Adebayo
             </Button>
           </div>
         </div>

@@ -84,7 +84,7 @@ export function FalconPlanSection() {
               size="xl"
               onClick={() =>
                 window.open(
-                  getWhatsAppLink("Hi Harper! I want to discover the Falcon Sales Plan."),
+                  getWhatsAppLink("Hi Adebayo! I want to discover the Falcon Sales Plan."),
                   "_blank"
                 )
               }

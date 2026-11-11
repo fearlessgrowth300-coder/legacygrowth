@@ -19,12 +19,12 @@ export function WhatIfSection() {
   ];
 
   const handleWhatsAppClick = () => {
-    window.open(getWhatsAppLink("Hey Harper, I'm tired of waiting and watching others succeed. I'm ready to get my digital business set up properly. Let's do this!"), '_blank');
+    window.open(getWhatsAppLink("Hey Adebayo, I'm tired of waiting and watching others succeed. I'm ready to get my digital business set up properly. Let's do this!"), '_blank');
   };
 
   const handleEmailClick = () => {
-    const subject = "I Choose Success - Ready to Work with Harper";
-    const body = "Hi Harper,\n\nI'm tired of waiting and watching others succeed while I stay stuck. I'm ready to make the decision that will change everything.\n\nI want to:\n- Stop struggling with tech overwhelm\n- Finally get my digital business set up properly\n- Start generating real results like your other clients\n- Transform my confusion into consistent sales\n\nI'm ready to choose success over staying stuck. Let's make this happen!\n\nBest regards";
+    const subject = "I Choose Success - Ready to Work with Adebayo";
+    const body = "Hi Adebayo,\n\nI'm tired of waiting and watching others succeed while I stay stuck. I'm ready to make the decision that will change everything.\n\nI want to:\n- Stop struggling with tech overwhelm\n- Finally get my digital business set up properly\n- Start generating real results like your other clients\n- Transform my confusion into consistent sales\n\nI'm ready to choose success over staying stuck. Let's make this happen!\n\nBest regards";
     const encodedSubject = encodeURIComponent(subject);
     const encodedBody = encodeURIComponent(body);
     window.location.href = `mailto:harperharvey834@gmail.com?subject=${encodedSubject}&body=${encodedBody}`;
@@ -101,8 +101,8 @@ export function WhatIfSection() {
               className="bg-accent text-accent-foreground hover:bg-accent/90 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-300 hover:shadow-gold hover:transform hover:scale-105"
             >
               <MessageCircle className="mr-2 sm:mr-3 h-4 w-4 sm:h-5 sm:w-5" />
-              <span className="hidden sm:inline">Choose Success - WhatsApp Harper</span>
-              <span className="sm:hidden">WhatsApp Harper</span>
+              <span className="hidden sm:inline">Choose Success - WhatsApp Adebayo</span>
+              <span className="sm:hidden">WhatsApp Adebayo</span>
             </Button>
             
             <Button
@@ -112,7 +112,7 @@ export function WhatIfSection() {
               className="px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold"
             >
               <Mail className="mr-2 sm:mr-3 h-4 w-4 sm:h-5 sm:w-5" />
-              <span className="hidden sm:inline">Email Harper</span>
+              <span className="hidden sm:inline">Email Adebayo</span>
               <span className="sm:hidden">Email</span>
             </Button>
           </div>
