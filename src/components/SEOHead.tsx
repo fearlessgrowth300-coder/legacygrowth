@@ -67,11 +67,11 @@ export function SEOHead({
     const structuredDataGraph: any[] = [
       {
         "@type": "Organization",
-        "@id": `${url}#organization`,
+        "@id": `${DEFAULT_URL}#organization`,
         "name": "Legacy Falcon Marketing",
         "alternateName": ["Legacy Falcons", "Legacy Falcon", "Falcon Marketing", "Falcon", "Legacy Falcons Marketing"],
         "url": url,
-        "logo": `${url}favicon-512.png`,
+        "logo": `${DEFAULT_URL}favicon-512.png`,
         "image": image,
         "slogan": "Speed, sharp vision, precision, power, and freedom for digital product owners.",
         "description": "Legacy Falcon Marketing helps creators, entrepreneurs, busy moms, and course owners market digital products with strategic sales funnels, sharp positioning, content systems, and conversion-focused launch support.",
@@ -87,24 +87,24 @@ export function SEOHead({
       },
       {
         "@type": "WebSite",
-        "@id": `${url}#website`,
+        "@id": `${DEFAULT_URL}#website`,
         "url": url,
         "name": "Legacy Falcon Marketing",
         "publisher": {
-          "@id": `${url}#organization`
+          "@id": `${DEFAULT_URL}#organization`
         },
         "inLanguage": "en-US"
       },
       {
         "@type": "ProfessionalService",
-        "@id": `${url}#professional-service`,
+        "@id": `${DEFAULT_URL}#professional-service`,
         "name": "Legacy Falcon Marketing",
         "url": url,
         "image": image,
         "description": "Digital product marketing, course sales funnel strategy, product positioning, content strategy, launch support, and conversion optimization for creators and entrepreneurs.",
         "areaServed": "Worldwide",
         "provider": {
-          "@id": `${url}#organization`
+          "@id": `${DEFAULT_URL}#organization`
         },
         "serviceType": [
           "Digital product marketing",
@@ -116,11 +116,11 @@ export function SEOHead({
       },
       {
         "@type": "Service",
-        "@id": `${url}#digital-product-marketing-service`,
+        "@id": `${DEFAULT_URL}#digital-product-marketing-service`,
         "name": "Digital Product Marketing and Sales Funnel Strategy",
         "serviceType": "Digital Product Marketing",
         "provider": {
-          "@id": `${url}#organization`
+          "@id": `${DEFAULT_URL}#organization`
         },
         "areaServed": "Worldwide",
         "description": "Strategic marketing systems that help product owners move fast, find the right audience, sharpen their message, and turn digital products or courses into consistent revenue.",
@@ -137,13 +137,13 @@ export function SEOHead({
         "name": title,
         "description": description,
         "isPartOf": {
-          "@id": `${url}#website`
+          "@id": `${DEFAULT_URL}#website`
         },
         "about": {
-          "@id": `${url}#digital-product-marketing-service`
+          "@id": `${DEFAULT_URL}#digital-product-marketing-service`
         },
         "publisher": {
-          "@id": `${url}#organization`
+          "@id": `${DEFAULT_URL}#organization`
         },
         "inLanguage": "en-US"
       }
@@ -160,7 +160,7 @@ export function SEOHead({
           "name": articleData.author || "Legacy Falcon Marketing"
         },
         "publisher": {
-          "@id": `${url}#organization`
+          "@id": `${DEFAULT_URL}#organization`
         },
         "image": image,
         "articleSection": articleData.category,

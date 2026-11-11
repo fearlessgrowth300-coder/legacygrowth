@@ -4,10 +4,167 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, ArrowLeft, MessageCircle } from "lucide-react";
 import NotFound from "./NotFound";
+import {
+  ArticleNotSelling,
+  ArticleFirstSale,
+  ArticlePricing,
+  ArticlePlatforms,
+  ArticleSocialSelling,
+  ArticleEmailList,
+  ArticleConversionRate,
+  ArticleDoneForYou,
+} from "@/content/articles";
 
 const WHATSAPP_URL = "https://wa.me/16615518269";
 
-export const blogPosts = [
+// Bing flags titles over ~65 chars; only add the brand suffix when it fits.
+export const pageTitle = (t: string) =>
+  `${t} | Legacy Falcon Marketing`.length <= 65 ? `${t} | Legacy Falcon Marketing` : t;
+
+export type BlogPostMeta = {
+  slug: string;
+  title: string;
+  excerpt: string;
+  category: string;
+  readTime: string;
+  date: string;
+  dateISO: string;
+  updatedISO?: string;
+  featured: boolean;
+  // Rendered visibly under the article AND emitted as FAQPage JSON-LD by
+  // scripts/prerender.mjs — one source, so the two can't drift apart.
+  faqs: { q: string; a: string }[];
+};
+
+export const blogPosts: BlogPostMeta[] = [
+  {
+    slug: "why-is-my-digital-product-not-selling",
+    title: "Why Is My Digital Product Not Selling? 9 Reasons and Fixes",
+    excerpt:
+      "Most digital products don't sell because too few of the right people see them, the offer doesn't promise a specific result, or the sales page and checkout lose buyers. Here are the 9 causes and how to fix each.",
+    category: "Troubleshooting",
+    readTime: "7 min read",
+    date: "Nov 11, 2026",
+    dateISO: "2026-11-11",
+    featured: true,
+    faqs: [
+      { q: "Why do digital products fail to sell?", a: "Usually because not enough of the right people see the product, the offer describes what it is instead of the result it delivers, or the sales page and checkout lose buyers before they pay." },
+      { q: "How long should I promote a digital product before deciding it doesn't work?", a: "Promote it consistently for at least 30 days, mentioning it in most of your content, before judging it. Most creators under-promote and give up too early." },
+      { q: "Can someone fix my digital product sales for me?", a: "Yes. Legacy Falcon Marketing audits and rebuilds underperforming product funnels, including the offer, sales page, checkout, and follow-up, for a flat $97 to $497." },
+    ],
+  },
+  {
+    slug: "how-to-get-your-first-digital-product-sale",
+    title: "How to Get Your First Digital Product Sale With No Audience",
+    excerpt:
+      "With no audience, sell where buyers already gather: your personal network, communities, marketplaces like Etsy and Gumroad, and other creators' audiences. Pre-sell, make the offer specific, and add a guarantee.",
+    category: "Getting Started",
+    readTime: "6 min read",
+    date: "Nov 11, 2026",
+    dateISO: "2026-11-11",
+    featured: true,
+    faqs: [
+      { q: "Can you sell a digital product with zero followers?", a: "Yes. Borrow attention from marketplaces where buyers already search, communities where your buyers ask questions, and creators who already serve your audience." },
+      { q: "How long does it take to get the first digital product sale?", a: "Anywhere from a few days to a couple of months, depending mostly on how many of the right people see the offer. Commit to 30 days of consistent promotion." },
+      { q: "Should I pre-sell my digital product before creating it?", a: "Yes. Pre-selling at an early-bird price validates demand before you spend weeks building, and early buyers tell you what they actually want." },
+    ],
+  },
+  {
+    slug: "how-to-price-a-digital-product",
+    title: "How Much Should I Charge for My Digital Product? (2026 Pricing Guide)",
+    excerpt:
+      "Price by the result, not the effort. Typical ranges: templates $15–$50, ebooks $10–$47, mini-courses $47–$197, full courses $197–$997. Start lower-middle, use prices ending in 7, and raise as proof comes in.",
+    category: "Pricing",
+    readTime: "6 min read",
+    date: "Nov 11, 2026",
+    dateISO: "2026-11-11",
+    featured: false,
+    faqs: [
+      { q: "How much should I charge for an ebook?", a: "Most ebooks sell for $10 to $47. Ebooks bundled with video walkthroughs or templates typically sell for $47 to $197." },
+      { q: "How much should I charge for an online course?", a: "Mini-courses typically sell for $47 to $197 and full courses for $197 to $997, depending on the result they deliver and the proof you can show." },
+      { q: "Is it better to price a digital product low?", a: "Usually not. Very low prices signal low value. A $27 to $47 entry product followed by a higher-priced offer generally earns more than a single cheap product." },
+    ],
+  },
+  {
+    slug: "stan-store-vs-gumroad-vs-kajabi",
+    title: "Stan Store vs Gumroad vs Kajabi: Which Should Beginners Use?",
+    excerpt:
+      "Gumroad is cheapest to start (no monthly fee, a cut per sale). Stan Store suits social-media sellers wanting a link-in-bio store for a flat monthly fee. Kajabi suits established course sellers and costs the most.",
+    category: "Platforms",
+    readTime: "6 min read",
+    date: "Nov 11, 2026",
+    dateISO: "2026-11-11",
+    featured: false,
+    faqs: [
+      { q: "Is Stan Store or Gumroad better for beginners?", a: "Gumroad is better for testing an idea with no upfront cost. Stan Store is better for creators selling regularly from TikTok or Instagram who prefer a flat monthly fee over a per-sale cut." },
+      { q: "Is Kajabi worth it for beginners?", a: "Usually not before you have consistent sales. Kajabi bundles courses, email, and community, but its monthly cost and learning curve suit established course sellers." },
+      { q: "Does the platform affect how many digital products I sell?", a: "Very little. The offer, the sales page, and the traffic drive sales. Choose the cheapest platform that fits today and switch when you outgrow it." },
+    ],
+  },
+  {
+    slug: "how-to-sell-digital-products-on-tiktok-and-instagram",
+    title: "How to Sell Digital Products on TikTok and Instagram",
+    excerpt:
+      "Put a store or sales-page link in your bio, post short videos showing the problem your product solves, and end each with a 'link in bio' call to action. The link must handle checkout and delivery.",
+    category: "Social Selling",
+    readTime: "6 min read",
+    date: "Nov 11, 2026",
+    dateISO: "2026-11-11",
+    featured: false,
+    faqs: [
+      { q: "Can you sell digital products directly on Instagram?", a: "Not natively in most cases. Instagram Shopping is built for physical products, so creators use a link-in-bio store or sales page that handles checkout and automatic delivery." },
+      { q: "Why am I getting views on TikTok but no sales?", a: "Either the content attracts viewers who aren't buyers, or the bio link loses them. Link straight to one product and make sure the page loads fast on a phone." },
+      { q: "What is the best way to sell digital products on social media?", a: "Post consistent short videos that show a before-and-after, a quick win, or buyer results, and send viewers to a single product page that takes payment and delivers instantly." },
+    ],
+  },
+  {
+    slug: "do-you-need-an-email-list-to-sell-digital-products",
+    title: "Do You Need an Email List to Sell Digital Products?",
+    excerpt:
+      "No — a link-in-bio store or sales page can make your first sales. But a list is the only audience you own, and since most buyers don't purchase on the first visit, email or WhatsApp follow-up increases sales.",
+    category: "Email & Follow-up",
+    readTime: "5 min read",
+    date: "Nov 11, 2026",
+    dateISO: "2026-11-11",
+    featured: false,
+    faqs: [
+      { q: "Can I sell digital products without an email list?", a: "Yes. A link-in-bio store or sales page can take payment and deliver the product without a list. A list mainly increases follow-up and repeat sales." },
+      { q: "How many email subscribers do I need to sell a digital product?", a: "Fewer than most people think. A few hundred engaged subscribers who joined for a related free resource can support a product launch." },
+      { q: "Is WhatsApp good for following up with buyers?", a: "Yes, especially for warm leads and higher-priced offers, because messages are read quickly. Email scales better for large lists, and many funnels use both." },
+    ],
+  },
+  {
+    slug: "good-conversion-rate-for-a-sales-page",
+    title: "What Is a Good Conversion Rate for a Sales Page?",
+    excerpt:
+      "Roughly 2–5% of visitors buying is good for a digital product sales page: 2–3% is typical, above 5% is strong. Warm email traffic converts higher, cold social and ad traffic lower.",
+    category: "Conversion",
+    readTime: "5 min read",
+    date: "Nov 11, 2026",
+    dateISO: "2026-11-11",
+    featured: false,
+    faqs: [
+      { q: "What is a good conversion rate for a digital product?", a: "Roughly 2 to 5 percent of sales-page visitors buying. Around 2 to 3 percent is typical and above 5 percent is strong, depending on price and traffic source." },
+      { q: "How do I calculate sales page conversion rate?", a: "Divide purchases by unique visitors to the sales page and multiply by 100. For example, 5 sales from 200 visitors is a 2.5 percent conversion rate." },
+      { q: "Why is my sales page conversion rate under 1 percent?", a: "Usually the traffic doesn't match the offer, or the page doesn't make the specific result clear. Fix the headline, add proof, and send one call to action straight to checkout." },
+    ],
+  },
+  {
+    slug: "is-a-done-for-you-sales-funnel-worth-it",
+    title: "Is a Done-For-You Sales Funnel Worth It? (And How to Spot a Scam)",
+    excerpt:
+      "Worth it if you have a product people want and your time is better spent elsewhere than learning funnel software. Not worth it as a 'guaranteed income' system — no honest provider guarantees sales.",
+    category: "Buying Guide",
+    readTime: "6 min read",
+    date: "Nov 11, 2026",
+    dateISO: "2026-11-11",
+    featured: false,
+    faqs: [
+      { q: "Are done-for-you sales funnels a scam?", a: "Not inherently, but offers that guarantee income, sell identical resell-rights products as a business, show no live examples, or keep the account logins are red flags." },
+      { q: "What should a done-for-you sales funnel include?", a: "A sales page written around your offer, a working checkout, product delivery, email or WhatsApp follow-up automation, and a handover so you own every account." },
+      { q: "How much does a done-for-you sales funnel cost?", a: "Freelancers charge about $200 to $2,000 and agencies $5,000 or more. Legacy Falcon Marketing charges a flat $97 to $497 with 30 days of WhatsApp support." },
+    ],
+  },
   {
     slug: "how-much-does-a-sales-funnel-cost",
     title: "How Much Does a Sales Funnel Cost in 2026? (Real Numbers)",
@@ -17,7 +174,13 @@ export const blogPosts = [
     readTime: "7 min read",
     date: "Jul 13, 2026",
     dateISO: "2026-07-13",
+    updatedISO: "2026-11-11",
     featured: true,
+    faqs: [
+      { q: "How much does it cost to build a sales funnel yourself?", a: "About $30 to $300 per month in software for a page builder, email platform, and checkout, plus several weeks of your time." },
+      { q: "How much do freelance funnel builders charge?", a: "Freelancers on marketplaces like Fiverr and Upwork typically charge $200 to $2,000 per funnel, depending on whether strategy and copywriting are included." },
+      { q: "Is a sales funnel worth the money?", a: "Usually, if you have traffic. Lifting conversion from 1 percent to 2.5 percent more than doubles revenue from the same visitors, which often pays back a $497 build within a month." },
+    ],
   },
   {
     slug: "how-to-build-a-sales-funnel-for-digital-products",
@@ -28,7 +191,13 @@ export const blogPosts = [
     readTime: "9 min read",
     date: "Jul 12, 2026",
     dateISO: "2026-07-12",
+    updatedISO: "2026-11-11",
     featured: true,
+    faqs: [
+      { q: "What are the parts of a sales funnel for a digital product?", a: "An offer with a specific price, a landing page, a simple checkout, an email or WhatsApp follow-up sequence, and a repeatable traffic source." },
+      { q: "How long does it take to build a sales funnel?", a: "Most creators can launch a working funnel in 7 to 14 days. Done-for-you builds at Legacy Falcon Marketing typically go live in about 7 days." },
+      { q: "What is the difference between a sales funnel and a website?", a: "A website presents many things to many visitors; a sales funnel guides one type of visitor through one path to one purchase, which is why funnels usually convert better for digital products." },
+    ],
   },
 ];
 
@@ -245,6 +414,14 @@ function ArticleFunnelCost() {
 }
 
 const articleComponents: Record<string, () => JSX.Element> = {
+  "why-is-my-digital-product-not-selling": ArticleNotSelling,
+  "how-to-get-your-first-digital-product-sale": ArticleFirstSale,
+  "how-to-price-a-digital-product": ArticlePricing,
+  "stan-store-vs-gumroad-vs-kajabi": ArticlePlatforms,
+  "how-to-sell-digital-products-on-tiktok-and-instagram": ArticleSocialSelling,
+  "do-you-need-an-email-list-to-sell-digital-products": ArticleEmailList,
+  "good-conversion-rate-for-a-sales-page": ArticleConversionRate,
+  "is-a-done-for-you-sales-funnel-worth-it": ArticleDoneForYou,
   "how-to-build-a-sales-funnel-for-digital-products": ArticleFunnelGuide,
   "how-much-does-a-sales-funnel-cost": ArticleFunnelCost,
 };
@@ -262,13 +439,14 @@ export default function BlogPost() {
   return (
     <>
       <SEOHead
-        title={`${post.title} | Legacy Falcon Marketing`}
+        title={pageTitle(post.title)}
         description={post.excerpt}
         url={`https://legacyfalcons.com/blog/${post.slug}`}
         schema="article"
         articleData={{
           headline: post.title,
           datePublished: post.dateISO,
+          dateModified: post.updatedISO,
           author: "Legacy Falcon Marketing",
           category: post.category,
         }}
@@ -291,9 +469,42 @@ export default function BlogPost() {
             <Clock className="h-4 w-4" />
             {post.readTime}
           </span>
+          {post.updatedISO && (
+            <span>
+              Updated <time dateTime={post.updatedISO}>{post.updatedISO}</time>
+            </span>
+          )}
         </div>
 
         <Body />
+
+        <section className="mt-16">
+          <h2 className="text-3xl font-bold mb-6">Frequently asked questions</h2>
+          <div className="space-y-6">
+            {post.faqs.map((f) => (
+              <div key={f.q}>
+                <h3 className="text-xl font-semibold mb-2">{f.q}</h3>
+                <p className="text-muted-foreground leading-relaxed">{f.a}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <nav className="mt-12" aria-label="Related guides">
+          <h2 className="text-2xl font-bold mb-4">Related guides</h2>
+          <ul className="list-disc pl-6 space-y-2">
+            {blogPosts
+              .filter((p) => p.slug !== post.slug)
+              .slice(0, 4)
+              .map((p) => (
+                <li key={p.slug}>
+                  <Link to={`/blog/${p.slug}`} className="text-primary underline">
+                    {p.title}
+                  </Link>
+                </li>
+              ))}
+          </ul>
+        </nav>
 
         <div className="mt-16 p-8 bg-primary text-primary-foreground rounded-xl text-center">
           <h2 className="text-2xl font-bold mb-3">Want this funnel built for you?</h2>

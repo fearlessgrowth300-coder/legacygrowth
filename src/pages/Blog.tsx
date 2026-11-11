@@ -5,8 +5,15 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Search, Calendar, Clock, ArrowRight, TrendingUp } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { blogPosts } from "./BlogPost";
+
+// Also read by scripts/prerender.mjs for the static /blog page.
+export const BLOG_META = {
+  title: "Digital Product & Sales Funnel Guides | Legacy Falcon Marketing",
+  description:
+    "Straight answers on selling digital products: pricing, first sales, Stan Store vs Gumroad vs Kajabi, conversion rates, and building sales funnels.",
+};
 
 export default function Blog() {
   const navigate = useNavigate();
@@ -24,10 +31,10 @@ export default function Blog() {
 
   return (
     <>
-      <SEOHead 
-        title="How to Optimize Sales Funnels & Increase Conversions | Free Digital Marketing Resources"
-        description="Learn proven strategies to optimize your sales funnels and increase conversion rates. Free expert guides on email marketing, landing page optimization, A/B testing, and conversion psychology from digital marketing consultant Harper Harvey."
-        keywords="how to optimize sales funnel, how to increase conversion rate, sales funnel optimization guide, landing page optimization tips, email marketing best practices, A/B testing guide, conversion rate optimization strategies, digital marketing free resources, sales psychology tactics, funnel automation guide"
+      <SEOHead
+        title={BLOG_META.title}
+        description={BLOG_META.description}
+        url="https://legacyfalcons.com/blog"
         schema="blog"
       />
 
@@ -85,10 +92,9 @@ export default function Blog() {
           
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {filteredPosts.filter(post => post.featured).map((post) => (
+              <Link key={post.slug} to={`/blog/${post.slug}`} className="block">
               <Card
-                key={post.slug}
-                className="overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer group border-2 hover:border-primary/50"
-                onClick={() => navigate(`/blog/${post.slug}`)}
+                className="h-full overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer group border-2 hover:border-primary/50"
               >
                 <div className="h-48 bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
                   <TrendingUp className="h-16 w-16 text-primary opacity-50" />
@@ -116,6 +122,7 @@ export default function Blog() {
                   </div>
                 </div>
               </Card>
+              </Link>
             ))}
           </div>
         </div>
@@ -128,10 +135,9 @@ export default function Blog() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredPosts.filter(post => !post.featured).map((post) => (
+              <Link key={post.slug} to={`/blog/${post.slug}`} className="block">
               <Card
-                key={post.slug}
-                className="overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer group hover:border-primary/50"
-                onClick={() => navigate(`/blog/${post.slug}`)}
+                className="h-full overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer group hover:border-primary/50"
               >
                 <div className="h-32 bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center">
                   <TrendingUp className="h-12 w-12 text-primary opacity-30" />
@@ -156,6 +162,7 @@ export default function Blog() {
                   </div>
                 </div>
               </Card>
+              </Link>
             ))}
           </div>
 

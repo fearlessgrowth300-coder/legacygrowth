@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://legacyfalcons.com/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -30,19 +30,67 @@
   </url>
   <url>
     <loc>https://legacyfalcons.com/blog</loc>
-    <lastmod>2026-07-12</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://legacyfalcons.com/blog/how-to-build-a-sales-funnel-for-digital-products</loc>
-    <lastmod>2026-07-12</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://legacyfalcons.com/blog/how-much-does-a-sales-funnel-cost</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://legacyfalcons.com/blog/why-is-my-digital-product-not-selling</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://legacyfalcons.com/blog/how-to-get-your-first-digital-product-sale</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://legacyfalcons.com/blog/how-to-price-a-digital-product</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://legacyfalcons.com/blog/stan-store-vs-gumroad-vs-kajabi</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://legacyfalcons.com/blog/how-to-sell-digital-products-on-tiktok-and-instagram</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://legacyfalcons.com/blog/do-you-need-an-email-list-to-sell-digital-products</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://legacyfalcons.com/blog/good-conversion-rate-for-a-sales-page</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://legacyfalcons.com/blog/is-a-done-for-you-sales-funnel-worth-it</loc>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
